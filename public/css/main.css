@@ -43,3 +43,20 @@ section#home > .content > .text {
 section#home .name {
     color: #e31b6d;
 }
+
+section#home .typewrite {
+    text-decoration: none;
+    color: inherit;
+}
+
+section#home .typewrite > .wrap { 
+    border-right: 0.08em solid #fff; 
+    animation: blink-caret 1s steps(1) infinite;
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    50% {
+        border-color: transparent;
+    }
+}
