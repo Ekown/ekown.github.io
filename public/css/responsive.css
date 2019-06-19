@@ -9,6 +9,29 @@
         font-size: 14px;
         padding-top: 7px;
     }
+
+    section#about .title {
+        font-size: 40px;
+    }
+
+    section#about .profile-text {
+        font-size: 16px;
+        margin-top: 25px;
+    }
+
+    section#about .tech-title {
+        font-size: 25px;
+        margin-top: 15px;
+        font-weight: 600;
+    }
+
+    section#about .tech-content {
+        margin-top: 10px;
+    }
+
+    section#about .tech-content > .progress {
+        margin-top: 15px;
+    }
 }
 
 @media screen and (min-width: 577px) and (max-width: 767px) {
@@ -21,6 +44,15 @@
         height: 50px;
         font-size: 18px;
         padding-top: 8px;
+    }
+
+    section#about .title {
+        font-size: 45px;
+    }
+
+    section#about .profile-text {
+        font-size: 18px;
+        margin-top: 30px;
     }
 }
 
@@ -35,6 +67,15 @@
         font-size: 18px;
         padding-top: 8px;
     }
+
+    section#about .title {
+        font-size: 50px;
+    }
+
+    section#about .profile-text {
+        font-size: 18px;
+        margin-top: 55px;
+    }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1199px) {
@@ -48,6 +89,15 @@
         font-size: 18px;
         padding-top: 8px;
     }
+
+    section#about .title {
+        font-size: 55px;
+    }
+
+    section#about .profile-text {
+        font-size: 20px;
+        margin-top: 70px !important;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -60,5 +110,14 @@
         height: 50px;
         font-size: 18px;
         padding-top: 8px;
+    }
+
+    section#about .title {
+        font-size: 60px;
+    }
+
+    section#about .profile-text {
+        font-size: 25px;
+        margin-top: 80px !important;
     }
 }

@@ -17,7 +17,7 @@ a.bttn-dark:hover > i {
     margin-top: 0;
 }
 
-a.bttn-dark:hover, a.bttn-dark:focus {
+a.bttn-dark:hover {
     color: #FFF;
 }
 
@@ -51,14 +51,6 @@ a.bttn-dark:hover, a.bttn-dark:focus {
 }
 
 .bttn-dark:hover:before {
-    -webkit-transition:0.5s all ease;
-    transition:0.5s all ease;
-    left:0;
-    right:0;
-    opacity:1;
-}
-
-.bttn-dark:focus:before {
     -webkit-transition:0.5s all ease;
     transition:0.5s all ease;
     left:0;

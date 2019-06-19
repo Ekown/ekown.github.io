@@ -1,6 +1,10 @@
 @import 'responsive.css';
 @import 'button.css';
 
+a, a:hover {
+    text-decoration: none;
+}
+
 body {
     color: #fff;
     font-family: 'Raleway', sans-serif;
@@ -12,10 +16,18 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    position: relative;
+    background-color: #fff;
+}
+
+section.dark {
+    background-color: #c3c0c0;
+}
+
 section#home {
     background-image: radial-gradient(100% 176%, #253854 80%, #061922 100%);
     min-height: 100vh;
-    position: relative;
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -59,4 +71,28 @@ section#home .typewrite > .wrap {
     50% {
         border-color: transparent;
     }
+}
+
+section#about {
+    color: #313131;
+}
+
+section#about .title {
+    font-weight: 700;
+}
+
+section#about .profile {
+    background-image: url('../img/profile.jpg');
+    background-size: cover;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+}
+
+section#about .tech-title {
+    font-weight: 600;
 }
