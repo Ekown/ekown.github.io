@@ -29,8 +29,18 @@
         margin-top: 20px;
     }
 
-    section#about .tech-content > .progress {
-        margin-top: 15px;
+    section#about .progress {
+        height: 1rem;
+    }
+
+    section#about .legend {
+        width: 10px;
+        height: 10px;
+        margin-top: -2px;
+    }
+
+    section#about .legend-row {
+        margin-bottom: 10px;
     }
 }
 
@@ -54,6 +64,32 @@
         font-size: 18px;
         margin-top: 30px;
     }
+
+    section#about .tech-content {
+        margin-top: 20px;
+    }
+
+    section#about .legend-text {
+        font-size: 13px;
+    }
+
+    section#about .legend {
+        width: 13px;
+        height: 13px;
+        margin-top: -3px;
+    }
+
+    section#about .progress {
+        height: 1.2rem;
+    }
+
+    section#about .progress-label {
+        font-size: 14px;
+    }
+
+    section#about .legend-row {
+        margin-bottom: 20px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width: 991px) {
@@ -75,6 +111,32 @@
     section#about .profile-text {
         font-size: 18px;
         margin-top: 55px;
+    }
+
+    section#about .tech-content {
+        margin-top: 30px;
+    }
+
+    section#about .legend-text {
+        font-size: 15px;
+    }
+
+    section#about .legend {
+        width: 15px;
+        height: 15px;
+        margin-top: -5px;
+    }
+
+    section#about .progress {
+        height: 1.4rem;
+    }
+
+    section#about .progress-label {
+        font-size: 16px;
+    }
+
+    section#about .legend-row {
+        margin-bottom: 25px;
     }
 }
 
@@ -98,6 +160,32 @@
         font-size: 20px;
         margin-top: 70px !important;
     }
+
+    section#about .tech-content {
+        margin-top: 50px;
+    }
+
+    section#about .legend-text {
+        font-size: 17px;
+    }
+
+    section#about .legend {
+        width: 17px;
+        height: 17px;
+        margin-top: -7px;
+    }
+
+    section#about .progress {
+        height: 1.6rem;
+    }
+
+    section#about .progress-label {
+        font-size: 17px;
+    }
+
+    section#about .legend-row {
+        margin-bottom: 30px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
@@ -119,5 +207,31 @@
     section#about .profile-text {
         font-size: 25px;
         margin-top: 80px !important;
+    }
+
+    section#about .tech-content {
+        margin-top: 50px;
+    }
+
+    section#about .legend-text {
+        font-size: 22px;
+    }
+
+    section#about .legend {
+        width: 22px;
+        height: 22px;
+        margin-top: -10px;
+    }
+
+    section#about .progress {
+        height: 1.8rem;
+    }
+
+    section#about .progress-label {
+        font-size: 18px;
+    }
+
+    section#about .legend-row {
+        margin-bottom: 35px;
     }
 }

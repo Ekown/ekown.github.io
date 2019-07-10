@@ -22,7 +22,7 @@ section#about .tech-title {
     font-weight: 600;
 }
 
-section#about .tech-content > .row {
+section#about .tech-content > .row:not(.legend-row) {
     margin-bottom: 15px;
 }
 
@@ -36,12 +36,13 @@ section#about .progress-bar {
 }
 
 section#about .legend {
-    width: 10px;
-    height: 10px;
     border-radius: 1rem;
     display: inline-block;
     vertical-align: middle;
-    margin-top: -2px;
+}
+
+section#about .legend-text {
+    font-style: italic;
 }
 
 section#about .legend-col {
@@ -49,13 +50,13 @@ section#about .legend-col {
 }
 
 section#about .legend-b {
-    background-color: blue;
+    background-color: #5050e4;
 }
 
 section#about .legend-i {
-    background-color: green;
+    background-color: #1ab51a;
 }
 
 section#about .legend-p {
-    background-color: red;
+    background-color: #f75050;
 }

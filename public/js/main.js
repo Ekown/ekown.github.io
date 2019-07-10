@@ -2,11 +2,11 @@ $(document).ready(function(){
     // Determines the color of the progress bar by its width
     function getProgressBarColor(aWidth) {
         if (aWidth <= 33) 
-            return 'blue';
+            return '#5050e4';
         else if (aWidth > 33 && aWidth <= 66)
-            return 'green';
+            return '#1ab51a';
         else if (aWidth > 66 && aWidth <= 100)
-            return 'red';
+            return '#f75050';
         else
             return 'gray';
     }
