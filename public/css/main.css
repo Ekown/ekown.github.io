@@ -1,6 +1,7 @@
 @import 'raleway.css';
 @import 'responsive.css';
 @import 'button.css';
+@import 'underline.css';
 @import 'home.css';
 @import 'about.css';
 
@@ -24,7 +25,7 @@ section {
     background-color: #fff;
 }
 
-section.dark {
+.dark {
     background-color: #c3c0c0;
 }
 
@@ -37,4 +38,9 @@ section.dark {
 
 .txt-a-l {
     text-align: left;
+}
+
+.title {
+    font-family: Raleway;
+    font-weight: 600;
 }

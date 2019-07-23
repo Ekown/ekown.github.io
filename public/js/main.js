@@ -28,6 +28,19 @@ $(document).ready(function(){
         });
     }
 
+    function animateTitleUnderline(title) {
+        return function() {
+            $(title).parent('.underline').toggleClass('underline-active');
+        }
+    }
+
+    function animateSection(hT, hH, wS, callbackFunc) {
+        if (wS > (hT - hH)) {
+            callbackFunc();
+            $(window).off('scroll')
+        }
+    }
+
     // Smooth scrolling function listener
     $(document).on('click', 'a.smooth-scroll', (e) => {
         const $this = $(e.currentTarget);
@@ -45,14 +58,23 @@ $(document).ready(function(){
     });
 
     $(window).scroll(function() {
-        let hT = $('.tech-content').offset().top,
-            hH = $('.tech-content').outerHeight(),
-            wH = $(window).height(),
-            wS = $(this).scrollTop();
+        let wS = $(this).scrollTop();
+        let aboutTitle = $('#about').find('.title');
+        let projectTitle = $('#projects').find('.title');
+        
             
-        if (wS > (hT - hH)) {
-            animateProgressBar($('.tech-content'));
-            $(window).off('scroll')
-        }
+        animateSection($('.tech-content').offset().top, 
+                       $('.tech-content').outerHeight(),
+                       wS, animateProgressBar($('.tech-content')));
+
+        animateSection($(aboutTitle).offset().top,
+                       $(aboutTitle).outerHeight(),
+                       wS, animateTitleUnderline($(aboutTitle)));
+
+        animateSection($(projectTitle).offset().top,
+                       $(projectTitle).outerHeight(),
+                       wS, animateTitleUnderline($(projectTitle)));               
      });
+
+     
 });
