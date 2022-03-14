@@ -12,7 +12,6 @@ const Home = () => {
     wrapperClassName: 'typewrite', // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
   };
 
-  // @TODO: Add support for Bootstrap styling in React
   return (
     <div className={style.home}>
       <div className="snowfield">

@@ -1,9 +1,37 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import Home from './Home';
+import { render, cleanup, waitFor } from '@testing-library/react';
 
-it('It should mount', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<Home />, div);
-  ReactDOM.unmountComponentAtNode(div);
+afterEach(cleanup);
+
+let component;
+
+beforeEach(() => {
+  component = (
+    <React.Suspense fallback="loading">
+      <Home />
+    </React.Suspense>
+  );
+});
+
+test('should render properly', async () => {
+  const { getByText } = render(component);
+
+  const lazyElement = await waitFor(() => getByText(/Eron Tancioco/i));
+
+  expect(lazyElement).toBeInTheDocument();
+});
+
+test('should show the typewriter component', async () => {
+  const { container } = render(component);
+
+  expect(container.getElementsByClassName('typewrite').length).toBe(1);
+});
+
+test('should show see more button', async () => {
+  const { getByText } = render(component);
+
+  const lazyElement = await waitFor(() => getByText(/See More/i));
+
+  expect(lazyElement).toBeInTheDocument();
 });
