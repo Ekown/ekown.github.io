@@ -1,5 +1,4 @@
 import React, { lazy } from 'react';
-import PropTypes from 'prop-types';
 import style from './Home.module.scss';
 import Typewriter from 'typewriter-effect';
 
