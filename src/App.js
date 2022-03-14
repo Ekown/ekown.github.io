@@ -1,13 +1,9 @@
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faArrowRight, faB } from '@fortawesome/free-solid-svg-icons';
 import React, { lazy, Suspense } from 'react';
 import './App.scss';
+import registerIcons from './registerIcons';
 
-const arUsedIcons = [
-  faArrowRight,
-];
-
-library.add(faB, ...arUsedIcons);
+// This registers all the icons that the app uses
+registerIcons();
 
 function App() {
   const Home = lazy(() => import('./components/Home/Home'));
