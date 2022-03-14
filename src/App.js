@@ -1,5 +1,13 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faArrowRight, faB } from '@fortawesome/free-solid-svg-icons';
 import React, { lazy, Suspense } from 'react';
 import './App.scss';
+
+const arUsedIcons = [
+  faArrowRight,
+];
+
+library.add(faB, ...arUsedIcons);
 
 function App() {
   const Home = lazy(() => import('./components/Home/Home'));

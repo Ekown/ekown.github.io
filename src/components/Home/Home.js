@@ -1,6 +1,7 @@
 import React, { lazy } from 'react';
 import style from './Home.module.scss';
 import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const Home = () => {
   const Snow = lazy(() => import('../Snow/Snow'));
@@ -18,12 +19,12 @@ const Home = () => {
       </div>
 
 
-      <div className="content">
+      <div className="content col-12">
         <div className="text px-4 px-sm-1">
           Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
         </div>
-        <div className="button">
-          <a href="#about" className="bttn-dark smooth-scroll">See More<i className="fa fa-arrow-right" aria-hidden="true"></i></a>
+        <div className="button pt-1">
+          <a href="#about" className="ghost-button smooth-scroll">See More<FontAwesomeIcon icon="arrow-right" /></a>
         </div>
       </div>
     </div>

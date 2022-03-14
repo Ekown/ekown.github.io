@@ -1,7 +1,4 @@
 .home {
-    // background-image: radial-gradient(100% 176%, #253854 80%, #061922 100%);
-    // min-height: 100vh;
-    // overflow: hidden;
     display: flex;
     justify-content: center;
     align-content: center;
@@ -71,6 +68,7 @@
     
         .name {
             color: #e31b6d;
+            font-weight: 550;
         }
     
         .typewrite {
