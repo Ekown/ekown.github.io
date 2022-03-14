@@ -17,8 +17,7 @@ const Home = () => {
       <div className="snowfield">
         <Snow />
       </div>
-
-
+      
       <div className="content col-12">
         <div className="text px-4 px-sm-1">
           Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />

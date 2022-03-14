@@ -1,3 +1,38 @@
-@import 'theme/theme';
+@import 'core/theme/theme';
+@import 'core/theme/ghost-button';
+@import 'core/theme/underline';
 
 @import "~bootstrap/scss/bootstrap";
+
+@media screen and (max-width: 576px) {
+    .title {
+        font-size: 40px;
+    }
+}
+
+@media screen and (min-width: 577px) and (max-width: 767px) {
+    .title {
+        font-size: 45px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .title {
+        font-size: 50px;
+        padding-top: 50px !important;
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+    .title {
+        font-size: 55px;
+        padding-top: 50px !important;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .title {
+        font-size: 60px;
+        padding-top: 50px !important;
+    }
+}
