@@ -75,5 +75,5 @@ Thank you for these wonderful works and design models:
 
 - https://codemyui.com/ghost-button-animation/ 
 - http://findmatthew.com/
-- https://codepen.io/matchboxhero/pen/JrLJeb
-- https://css-tricks.com/snippets/css/typewriter-effect/
+- https://codepen.io/alphardex/pen/dyPorwJ
+- https://css-tricks.com/approaches-media-queries-sass/

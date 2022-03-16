@@ -1,0 +1,44 @@
+@import '~include-media/dist/_include-media';
+
+// Override default breakpoints with app-defined breakpoints
+$breakpoints : (
+    phone: 576px,
+    tablet: 768px,
+    laptop: 992px,
+    desktop: 1200px,
+);
+
+// Media query arguments to be passed based on the responsiveness
+$media-queries: (
+    phone: ('screen', '<=phone'),
+    tablet: ('screen', '>phone', '<=tablet'),
+    laptop: ('screen', '>tablet', '<=laptop'),
+    desktop: ('screen', '>laptop', '<=desktop'),
+    wide: ('screen', '>desktop'),
+);
+
+///
+/// Generates a parsed media query using the screen size definitions
+///
+/// @param {String} $screen-size  - Screen size
+///
+/// @example scss @include responsive('phone') { }
+///
+@mixin responsive($screen-size) {
+    // Check if the screen size is defined
+    @if map-has-key($media-queries, $screen-size) {
+        // Get the media query arguments using the screen size
+        $media-arguments: map-get($media-queries, $screen-size);
+
+        // Pass the media query arguments to the include-media mixin 
+        @include media($media-arguments...) {
+            @content
+        }
+    } @else {
+        $_: im-log('Unknown responsive screen size `#{$screen-size}`.');
+    }
+}
+
+// @TODO: Add a mixin that takes a style and its corresponding values in all screen sizes 
+// using the responsive mixin
+// i.e. sample-mixin('font-size', '1px',..., '10px')

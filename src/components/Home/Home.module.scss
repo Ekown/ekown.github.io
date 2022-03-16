@@ -1,3 +1,5 @@
+@import "../../core/theme/mixins/responsive"; // @TODO: Find a way to import a global mixin to create react app
+
 .home {
     display: flex;
     justify-content: center;
@@ -35,32 +37,31 @@
                 text-decoration: none;
             }
 
-            // @TODO: Find a way to simplify and optimize the sass code for different media widths
-            @media screen and (max-width: 576px) {
+            @include responsive('phone') {
                 .text {
                     font-size: 21px;
                 }
             }
 
-            @media screen and (min-width: 577px) and (max-width: 767px) {
+            @include responsive('tablet') {
                 .text {
                     font-size: 42px;
                 }
             }
 
-            @media screen and (min-width: 768px) and (max-width: 991px) {
+            @include responsive('laptop') {
                 .text {
                     font-size: 47px;
                 }
             }
 
-            @media screen and (min-width: 992px) and (max-width: 1199px) {
+            @include responsive('desktop') {
                 .text {
                     font-size: 50px;
                 }
             }
 
-            @media screen and (min-width: 1200px) {
+            @include responsive('wide') {
                 .text {
                     font-size: 54px;
                 }
