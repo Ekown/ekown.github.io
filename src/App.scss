@@ -3,7 +3,6 @@
 @import 'core/theme/underline';
 
 @import "~bootstrap/scss/bootstrap";
-@import "core/theme/mixins/responsive";
 
 @include responsive('phone') {
     .title {
