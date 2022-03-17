@@ -35,34 +35,8 @@
                 text-decoration: none;
             }
 
-            @include responsive('phone') {
-                .text {
-                    font-size: 21px;
-                }
-            }
-
-            @include responsive('tablet') {
-                .text {
-                    font-size: 42px;
-                }
-            }
-
-            @include responsive('laptop') {
-                .text {
-                    font-size: 47px;
-                }
-            }
-
-            @include responsive('desktop') {
-                .text {
-                    font-size: 50px;
-                }
-            }
-
-            @include responsive('wide') {
-                .text {
-                    font-size: 54px;
-                }
+            .text {
+                @include responsive('font-size', '21px', '42px', '47px', '50px', '54px');
             }
         }
     

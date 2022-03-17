@@ -4,35 +4,7 @@
 
 @import "~bootstrap/scss/bootstrap";
 
-@include responsive('phone') {
-    .title {
-        font-size: 40px;
-    }
-}
-
-@include responsive('tablet') {
-    .title {
-        font-size: 45px;
-    }
-}
-
-@include responsive('laptop') {
-    .title {
-        font-size: 50px;
-        padding-top: 50px !important;
-    }
-}
-
-@include responsive('desktop') {
-    .title {
-        font-size: 55px;
-        padding-top: 50px !important;
-    }
-}
-
-@include responsive('wide') {
-    .title {
-        font-size: 60px;
-        padding-top: 50px !important;
-    }
+.title {
+    @include responsive('font-size', '40px', '45px', '50px', '55px', '60px');
+    @include responsive('padding-top', null, null, '50px!', '55px!', '60px!');
 }

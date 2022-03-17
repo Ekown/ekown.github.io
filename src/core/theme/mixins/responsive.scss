@@ -19,12 +19,13 @@ $media-queries: (
 
 ///
 /// Generates a parsed media query using the screen size definitions
-///
+/// @author Eron Tancioco
+/// @access private
 /// @param {String} $screen-size  - Screen size
 ///
-/// @example scss @include responsive('phone') { }
+/// @return {void}
 ///
-@mixin responsive($screen-size) {
+@mixin parse-media-query($screen-size) {
     // Check if the screen size is defined
     @if map-has-key($media-queries, $screen-size) {
         // Get the media query arguments using the screen size
@@ -39,6 +40,67 @@ $media-queries: (
     }
 }
 
-// @TODO: Add a mixin that takes a style and its corresponding values in all screen sizes 
-// using the responsive mixin
-// i.e. sample-mixin('font-size', '1px',..., '10px')
+///
+/// Checks if the string has '!' character in the end to indicate importance
+/// @author Eron Tancioco
+/// @access private
+/// @param {String} $style-value - String style value
+///
+/// @return {Boolean}
+///
+@function check-important($style-value) {
+    @return if(str-index($style-value, '!') == str-length($style-value), true, false);
+}
+
+///
+/// Parses the string
+/// @author Eron Tancioco
+/// @access private
+/// @param {String} $style-value - String style value
+///
+/// @return {string}
+///
+@function parse-string($style-value) {
+    @if (type-of($style-value) == 'string') {
+        @if (check-important($style-value)) {
+            // @TODO: Add error checking when the end part of the string is "!important!"
+            @return str-insert($style-value, ' ', str-length($style-value)) + 'important';
+        } @else {
+            @return $style-value;
+        }        
+    } @else {
+        @return $style-value;
+    }
+}
+
+///
+/// Constructs the parsed media queries for each passed screen size style
+/// @author Eron Tancioco
+/// @param {String} $style-name - Name of the CSS style
+/// @param {Arglist} $screen-size-style - List of different screen size style values
+///
+/// @return {void}
+///
+@mixin responsive($style-name, $screen-size-style...) {
+    @if (length($screen-size-style) == 0) {
+        $_: im-log('Must have at least 1 screen size style.');
+    } @else {
+        $media-query-keys: map-keys($media-queries);
+
+        @for $i from 1 through length($screen-size-style) {
+            $current-media-query-key: nth($media-query-keys, $i);
+
+            @if ($current-media-query-key != null) {
+                $screen-size-style-key: parse-string(nth($screen-size-style, $i));
+
+                @include parse-media-query($current-media-query-key) {
+                    & {
+                        #{$style-name}: #{$screen-size-style-key};
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @TODO: Create your first working npm package for this mixin
