@@ -19,21 +19,25 @@ const Home = () => {
         <Snow />
       </div>
       
-      <div className="content col-12">
-        <div className="text px-4 px-sm-1">
-          Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+      <div className="content container">
+        <div className="row">
+          <div className="text px-4 px-sm-1">
+            Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+          </div>
         </div>
-        <div className="button pt-1">
-          <Link
-            className="ghost-button"
-            activeClass="active"
-            to="about"
-            spy={false}
-            hashSpy={false}
-            smooth={true}
-            // offset={-70}
-            duration={500}
-          >See More<FontAwesomeIcon icon="arrow-right" /></Link>
+        <div className="row">
+          <div className="button pt-1">
+            <Link
+              className="ghost-button"
+              activeClass="active"
+              to="about"
+              spy={false}
+              hashSpy={false}
+              smooth={true}
+              // offset={-70}
+              duration={500}
+            >See More<FontAwesomeIcon icon="arrow-right" /></Link>
+          </div>
         </div>
       </div>
     </div>

@@ -1,25 +1,23 @@
 a.ghost-button {
     color: #644cad;
 	text-decoration: none;
-	-webkit-transition: 0.3s all ease;
 	transition: 0.3s ease all;
-
-    font-size: 18px;
-	letter-spacing: 2px;
 	display: inline-block;
 	text-align: center;
-	width: 200px;
 	font-weight: 400;
 	border: 3px solid #644cad;
 	border-radius: 2px;
 	position: relative;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1);
 	z-index: 2;
-    padding-top: 10px;
-    padding-bottom: 10px;
+
+    @include responsive('width', '100px', '150px', '200px', '250px', '260px');
+    @include responsive('font-size', '12px', '16px', '20px', '24px', '26px');
+    @include responsive('letter-spacing', '0', '1.5px', '2px', '2.5px', '2.75px');
+    @include responsive('padding-top', '5px', '8px', '10px', '12px', '12px');
+    @include responsive('padding-bottom', '5px','8px', '10px', '12px', '12px');
 
     &:before {
-        -webkit-transition: 0.5s all ease;
         transition: 0.5s all ease;
         position: absolute;
         top: 0;
@@ -33,11 +31,11 @@ a.ghost-button {
     }
 
     &:hover:before {
-        -webkit-transition: 0.5s all ease;
         transition: 0.5s all ease;
         left: 0;
         right: 0;
-        opacity: 1
+        margin: -1px;
+        opacity: 1;
     }
 
     svg {

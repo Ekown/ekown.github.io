@@ -77,3 +77,4 @@ Thank you for these wonderful works and design models:
 - http://findmatthew.com/
 - https://codepen.io/alphardex/pen/dyPorwJ
 - https://css-tricks.com/approaches-media-queries-sass/
+- https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
