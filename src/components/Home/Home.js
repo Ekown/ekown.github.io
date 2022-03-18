@@ -1,7 +1,8 @@
 import React, { lazy } from 'react';
 import style from './Home.module.scss';
 import Typewriter from 'typewriter-effect';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Link } from "react-scroll";
 
 const Home = () => {
   const Snow = lazy(() => import('../Snow/Snow'));
@@ -23,7 +24,16 @@ const Home = () => {
           Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
         </div>
         <div className="button pt-1">
-          <a href="#about" className="ghost-button smooth-scroll">See More<FontAwesomeIcon icon="arrow-right" /></a>
+          <Link
+            className="ghost-button"
+            activeClass="active"
+            to="about"
+            spy={false}
+            hashSpy={false}
+            smooth={true}
+            // offset={-70}
+            duration={500}
+          >See More<FontAwesomeIcon icon="arrow-right" /></Link>
         </div>
       </div>
     </div>

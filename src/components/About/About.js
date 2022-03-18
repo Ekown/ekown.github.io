@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './About.module.scss';
 
 const About = () => (
-  <div className={ styles.about + ' container' }>
+  <div className={ styles.about + ' container' } name="about">
     <div className="underline">
       <div className="title pt-3">ABOUT</div>
     </div>

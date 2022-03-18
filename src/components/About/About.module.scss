@@ -13,5 +13,9 @@
             height: 0;
             padding-bottom: 100%;
         }
+
+        .tech-content > .row:not(.legend-row) {
+            margin-bottom: 15px;
+        }
     }
 }
