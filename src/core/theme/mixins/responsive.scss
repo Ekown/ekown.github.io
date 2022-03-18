@@ -89,9 +89,10 @@ $media-queries: (
 
         @for $i from 1 through length($screen-size-style) {
             $current-media-query-key: nth($media-query-keys, $i);
+            $current-size-style: nth($screen-size-style, $i);
 
-            @if ($current-media-query-key != null) {
-                $screen-size-style-key: parse-string(nth($screen-size-style, $i));
+            @if ($current-size-style != null) {
+                $screen-size-style-key: parse-string($current-size-style);
 
                 @include parse-media-query($current-media-query-key) {
                     & {
