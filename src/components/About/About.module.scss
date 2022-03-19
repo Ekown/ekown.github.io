@@ -17,5 +17,40 @@
         .tech-content > .row:not(.legend-row) {
             margin-bottom: 15px;
         }
+
+        .progress {
+            background-color: #d2d4d6;
+        }
+        
+        .progress-bar {
+            border: 1px solid black;
+            border-radius: inherit;
+        }
+        
+        .legend {
+            border-radius: 1rem;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .legend-text {
+            font-style: italic;
+        }
+
+        .legend-col {
+            padding: 0;
+        }
+
+        .legend-b {
+            background-color: #5050e4;
+        }
+        
+        .legend-i {
+            background-color: #1ab51a;
+        }
+        
+        .legend-p {
+            background-color: #f75050;
+        }
     }
 }

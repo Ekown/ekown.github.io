@@ -33,7 +33,9 @@ const Home = () => {
               to="about"
               spy={false}
               hashSpy={false}
-              smooth={true}
+              smooth={false}
+              isDynamic={true}
+              delay={0}
               // offset={-70}
               duration={500}
             >See More<FontAwesomeIcon icon="arrow-right" /></Link>

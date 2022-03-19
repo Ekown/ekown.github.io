@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './Home';
-import { render, cleanup, waitFor } from '@testing-library/react';
+import { render, cleanup, waitFor, fireEvent } from '@testing-library/react';
 
 afterEach(cleanup);
 
@@ -34,4 +34,5 @@ test('should show see more button', async () => {
   const lazyElement = await waitFor(() => getByText(/See More/i));
 
   expect(lazyElement).toBeInTheDocument();
+  expect(lazyElement.getElementsByClassName('fa-arrow-right').length).toBe(1);
 });
