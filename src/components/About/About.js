@@ -9,7 +9,7 @@ const About = () => {
   });
 
   return (
-    <div className={ styles.about + ' container' } name="about" ref={ref} role="container">
+    <div className={ styles.about + ' container' } name="about" ref={ref}>
       <div className={ 'underline' + (inView ? ' underline-active' : '') }>
         <div className="title pt-3">ABOUT</div>
       </div>
