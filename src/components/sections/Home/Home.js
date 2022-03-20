@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-scroll";
 
 const Home = () => {
-  const Snow = lazy(() => import('../Snow/Snow'));
+  const Snow = lazy(() => import('../../common/Snow/Snow'));
   const objTypewriterConfig = {
     strings: ['full-stack web developer.', 'software engineer.', 'forever learner.', 'tech enthusiast.'],
     autoStart: true,

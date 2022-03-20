@@ -1,0 +1,57 @@
+.experience {
+    :global {
+        .tech-content {
+            @include responsive('margin-top', '50px', '50px', '50px', '70px', '70px');
+            @include responsive('margin-bottom', '30px');
+
+            & > .row:not(.legend-row) {
+                margin-bottom: 15px;
+            }
+        }
+
+        .progress {
+            background-color: #d2d4d6;
+        }
+        
+        .progress-bar {
+            border: 1px solid black;
+            border-radius: inherit;
+        }
+
+        .legend-row {
+            @include responsive('margin-bottom', '10px', '20px', '25px', '30px', '35px');
+
+            .legend {
+                border-radius: 1rem;
+                display: inline-block;
+                vertical-align: middle;
+
+                @include responsive('width', '10px', '13px', '15px', '17px', '22px');
+                @include responsive('height', '10px', '13px', '15px', '17px', '22px');
+                @include responsive('margin-top', '-2px', '-3px', '-5px', '-7px', '-10px');
+
+                &--b {
+                    background-color: #5050e4;
+                }
+                
+                &--i {
+                    background-color: #1ab51a;
+                }
+                
+                &--p {
+                    background-color: #f75050;
+                }
+            }
+
+            .legend-text {
+                font-style: italic;
+
+                @include responsive('font-size', '13px', '13px', '15px', '17px', '22px');
+            }
+    
+            .legend-col {
+                padding: 0;
+            }
+        }
+    }
+}

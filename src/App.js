@@ -6,8 +6,8 @@ import registerIcons from './registerIcons';
 registerIcons();
 
 function App() {
-  const Home = lazy(() => import('./components/Home/Home'));
-  const About = lazy(() => import('./components/About/About'));
+  const Home = lazy(() => import('./components/sections/Home/Home'));
+  const About = lazy(() => import('./components/sections/About/About'));
 
   // @TODO: Add proper fallback when the site is loading with complete styling 
   return (
