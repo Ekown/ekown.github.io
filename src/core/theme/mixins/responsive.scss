@@ -1,0 +1,107 @@
+@import '~include-media/dist/_include-media';
+
+// Override default breakpoints with app-defined breakpoints
+$breakpoints : (
+    phone: 576px,
+    tablet: 768px,
+    laptop: 992px,
+    desktop: 1200px,
+);
+
+// Media query arguments to be passed based on the responsiveness
+$media-queries: (
+    phone: ('screen', '<=phone'),
+    tablet: ('screen', '>phone', '<=tablet'),
+    laptop: ('screen', '>tablet', '<=laptop'),
+    desktop: ('screen', '>laptop', '<=desktop'),
+    wide: ('screen', '>desktop'),
+);
+
+///
+/// Generates a parsed media query using the screen size definitions
+/// @author Eron Tancioco
+/// @access private
+/// @param {String} $screen-size  - Screen size
+///
+/// @return {void}
+///
+@mixin parse-media-query($screen-size) {
+    // Check if the screen size is defined
+    @if map-has-key($media-queries, $screen-size) {
+        // Get the media query arguments using the screen size
+        $media-arguments: map-get($media-queries, $screen-size);
+
+        // Pass the media query arguments to the include-media mixin 
+        @include media($media-arguments...) {
+            @content
+        }
+    } @else {
+        $_: im-log('Unknown responsive screen size `#{$screen-size}`.');
+    }
+}
+
+///
+/// Checks if the string has '!' character in the end to indicate importance
+/// @author Eron Tancioco
+/// @access private
+/// @param {String} $style-value - String style value
+///
+/// @return {Boolean}
+///
+@function check-important($style-value) {
+    @return if(str-index($style-value, '!') == str-length($style-value), true, false);
+}
+
+///
+/// Parses the string
+/// @author Eron Tancioco
+/// @access private
+/// @param {String} $style-value - String style value
+///
+/// @return {string}
+///
+@function parse-string($style-value) {
+    @if (type-of($style-value) == 'string') {
+        @if (check-important($style-value)) {
+            // @TODO: Add error checking when the end part of the string is "!important!"
+            @return str-insert($style-value, ' ', str-length($style-value)) + 'important';
+        } @else {
+            @return $style-value;
+        }        
+    } @else {
+        @return $style-value;
+    }
+}
+
+///
+/// Constructs the parsed media queries for each passed screen size style
+/// @author Eron Tancioco
+/// @param {String} $style-name - Name of the CSS style
+/// @param {Arglist} $screen-size-style - List of different screen size style values
+///
+/// @return {void}
+///
+@mixin responsive($style-name, $screen-size-style...) {
+    @if (length($screen-size-style) == 0) {
+        $_: im-log('Must have at least 1 screen size style.');
+    } @else {
+        $media-query-keys: map-keys($media-queries);
+
+        @for $i from 1 through length($screen-size-style) {
+            $current-media-query-key: nth($media-query-keys, $i);
+            $current-size-style: nth($screen-size-style, $i);
+
+            @if ($current-size-style != null) {
+                $screen-size-style-key: parse-string($current-size-style);
+
+                @include parse-media-query($current-media-query-key) {
+                    & {
+                        #{$style-name}: #{$screen-size-style-key};
+                    }
+                }
+            }
+        }
+    }
+}
+
+// @TODO: Create your first working npm package for this mixin
