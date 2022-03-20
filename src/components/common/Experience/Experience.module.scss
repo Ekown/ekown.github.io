@@ -4,13 +4,19 @@
             @include responsive('margin-top', '50px', '50px', '50px', '70px', '70px');
             @include responsive('margin-bottom', '30px');
 
-            & > .row:not(.legend-row) {
+            .row:not(.legend-row) {
                 margin-bottom: 15px;
             }
         }
 
+        .progress-label {
+            @include responsive('font-size', '10px', '14px', '16px', '17px', '18px');
+        }
+
         .progress {
             background-color: #d2d4d6;
+
+            @include responsive('height', '1rem', '1.2rem', '1.4rem', '1.6rem', '1.8rem');
         }
         
         .progress-bar {
