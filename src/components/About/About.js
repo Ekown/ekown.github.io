@@ -1,5 +1,6 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
+import Profile from '../Profile/Profile';
 import styles from './About.module.scss';
 
 const About = () => {
@@ -13,15 +14,9 @@ const About = () => {
       <div className={ 'underline' + (inView ? ' underline-active' : '') }>
         <div className="title pt-3">ABOUT</div>
       </div>
-      {/* <div className="content">
-        <div className="row mt-md-4">
-          <div className="col-8 offset-2 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5 offset-lg-0 col-xl-5 mt-4">
-            <div className="profile"></div>
-          </div>
-          <div className="col-12 col-sm-12 col-md-6 col-lg-6 offset-lg-1 col-xl-6 profile-text">
-            I was a Junior Software Engineer at <a href="https://www.honcho.com.au" target="_blank">Honcho</a> in Pasay, Philippines. I have worked with different projects and technologies ranging from Zend to Angular. I handled both front-end and back-end tasks for the company. I have a thirst for knowledge and hunger for innovation. Let's make something new and exciting.
-          </div>
-        </div>
+      <div className="content">
+        <Profile />
+      {/*
         <div className="row">
           <div className="col-12 tech-content">
             <div className="row legend-row">
@@ -102,8 +97,8 @@ const About = () => {
               </div>
             </div>
           </div>
-        </div> 
-      </div> */}
+        </div> */}
+      </div> 
     </div>
   );
 }

@@ -37,7 +37,7 @@ const Home = () => {
               isDynamic={true}
               delay={0}
               // offset={-70}
-              duration={500}
+              duration={700}
             >See More<FontAwesomeIcon icon="arrow-right" /></Link>
           </div>
         </div>
