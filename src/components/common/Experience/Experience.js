@@ -42,7 +42,7 @@ const Experience = () => {
   }
 
   return (
-    <div className={styles.experience}>
+    <div className={styles.experience + ' container'}>
       <div className="row">
         <div className="col-12 tech-content">
           <div className="row legend-row">

@@ -4,10 +4,10 @@ import styles from './Profile.module.scss';
 const Profile = () => {
   return (
     <div className={ styles.profile + " row mt-md-4" }>
-      <div className="col-8 offset-2 col-sm-8 offset-sm-2 col-md-6 offset-md-0 col-lg-5 offset-lg-0 col-xl-5 mt-4">
+      <div className="col-8 offset-2 col-sm-8 offset-sm-2 col-md-5 offset-md-1 col-lg-4 offset-lg-1 col-xl-4 mt-4">
         <div className="picture"></div>
       </div>
-      <div className="col-12 col-sm-12 col-md-6 col-lg-6 offset-lg-1 col-xl-6 text d-flex align-items-center">
+      <div className="col-12 col-sm-12 col-md-6 col-lg-5 offset-lg-1 col-xl-5 text d-flex align-items-center">
         <div>
           <span>I was a Junior Software Engineer at </span>
           <a href="https://www.honcho.com.au" target="_blank" rel="noreferrer">Honcho</a>
