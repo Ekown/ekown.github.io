@@ -36,7 +36,7 @@ const Home = () => {
               smooth={false}
               isDynamic={true}
               delay={0}
-              // offset={-70}
+              offset={50}
               duration={700}
             >See More<FontAwesomeIcon icon="arrow-right" /></Link>
           </div>
