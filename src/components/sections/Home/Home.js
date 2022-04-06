@@ -13,6 +13,11 @@ const Home = () => {
     wrapperClassName: 'typewrite', // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
   };
 
+  // Removes the focus from the button when clicked
+  const handleClick = (evt) => {
+    evt.target.blur();
+  }
+
   return (
     <div className={style.home}>
       <div className="snowfield">
@@ -38,6 +43,7 @@ const Home = () => {
               delay={0}
               offset={0}
               duration={700}
+              onClick={handleClick}
             >See More<FontAwesomeIcon icon="arrow-right" /></Link>
           </div>
         </div>
