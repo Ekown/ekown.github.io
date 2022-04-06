@@ -17,9 +17,30 @@
         }
 
         .text {
-            font-size: 16px;
+            font-size: 17px;
             max-width: 650px;
-            @include responsive('margin-top', '25px', '30px', '55px', '55px', '80px');
+            margin-top: 30px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        a {
+            font-weight: 500;
+            color: #00009C;
+            transition: all .2s ease-in-out;
+            text-decoration: none;
+
+            &:hover, &:focus, &:active {
+                color: #0000DD;
+
+                &:not(:focus) {
+                    outline: 0;
+                }
+
+                &:not(:active) {
+                    text-decoration: underline;
+                }
+            }
         }
     } 
 }
