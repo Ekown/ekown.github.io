@@ -2,8 +2,6 @@ import React from 'react';
 import Experience from './Experience';
 import { render, cleanup, waitFor } from '@testing-library/react';
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
-import { SKILL_LEVELS } from '../../../core/constants/skill-levels';
-import { SKILLS } from '../../../core/enums/skills';
 
 afterEach(cleanup);
 
@@ -20,7 +18,7 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/Beginner/i));
+  const lazyElement = await waitFor(() => getByText(/HTML/i));
 
   expect(lazyElement).toBeInTheDocument();
 });

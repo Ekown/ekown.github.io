@@ -1,8 +1,8 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import Profile from '../../common/Profile/Profile';
-import Experience from '../../common/Experience/Experience';
+import Profile from '../../common/molecules/Profile/Profile';
 import styles from './About.module.scss';
+import Title from '../../common/atoms/Title/Title';
 
 const About = () => {
   const [ref, inView] = useInView({
@@ -11,15 +11,14 @@ const About = () => {
   });
 
   return (
-    <div className={ styles.about + ' container' } name="about" ref={ref}>
-      <div className={ 'underline' + (inView ? ' underline-active' : '') }>
-        <div className="title pt-3">ABOUT</div>
+    <section>
+      <div className={styles.about + ' container'} name="about" ref={ref}>
+        <Title content="about" inView={inView} />
+        <div className="content">
+          <Profile />
+        </div>
       </div>
-      <div className="content">
-        <Profile />
-        <Experience />
-      </div> 
-    </div>
+    </section>
   );
 }
 

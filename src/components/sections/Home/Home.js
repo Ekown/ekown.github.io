@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-scroll";
 
 const Home = () => {
-  const Snow = lazy(() => import('../../common/Snow/Snow'));
+  const Snow = lazy(() => import('../../common/atoms/Snow/Snow'));
   const objTypewriterConfig = {
     strings: ['full-stack web developer.', 'software engineer.', 'forever learner.', 'tech enthusiast.'],
     autoStart: true,
@@ -13,36 +13,45 @@ const Home = () => {
     wrapperClassName: 'typewrite', // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
   };
 
+  // Removes the focus from the button when clicked
+  const handleClick = (evt) => {
+    evt.target.blur();
+  }
+
   return (
-    <div className={style.home}>
-      <div className="snowfield">
-        <Snow />
-      </div>
-      
-      <div className="content container">
-        <div className="row">
-          <div className="text px-4 px-sm-1">
-            Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+    <section>
+      <div className={style.home}>
+        <div className="snowfield">
+          <Snow />
+        </div>
+
+        <div className="content container">
+          <div className="row">
+            <div className="text px-4 px-sm-1">
+              Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+            </div>
+          </div>
+          <div className="row">
+            <div className="button pt-1">
+              <Link
+                className="ghost-button"
+                activeClass="active"
+                to="about"
+                spy={false}
+                hashSpy={false}
+                smooth={false}
+                isDynamic={true}
+                delay={0}
+                offset={0}
+                duration={700}
+                onClick={handleClick}
+              >See More<FontAwesomeIcon icon="arrow-right" /></Link>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="button pt-1">
-            <Link
-              className="ghost-button"
-              activeClass="active"
-              to="about"
-              spy={false}
-              hashSpy={false}
-              smooth={false}
-              isDynamic={true}
-              delay={0}
-              offset={50}
-              duration={700}
-            >See More<FontAwesomeIcon icon="arrow-right" /></Link>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
+
   )
 };
 

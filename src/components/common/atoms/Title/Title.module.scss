@@ -1,0 +1,15 @@
+.title {
+    :global {
+        h2 {
+            font-family: "Lato", sans-serif;;
+            font-weight: 300;
+            text-align: center;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        
+            @include responsive('font-weight', '400');
+            @include responsive('font-size', '22px!', '30px!', '30px!', '30px!', '30px!');
+            @include responsive('padding-top', null, null, '50px!', '55px!', '60px!');
+        }
+    }
+}

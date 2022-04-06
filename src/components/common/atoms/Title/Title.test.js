@@ -1,5 +1,5 @@
 import React from 'react';
-import Profile from './Profile';
+import Title from './Title';
 import { render, cleanup, waitFor } from '@testing-library/react';
 
 afterEach(cleanup);
@@ -7,17 +7,17 @@ afterEach(cleanup);
 let component;
 
 beforeEach(() => {
-  component = (
+  component = (strText) => (
     <React.Suspense fallback="loading">
-      <Profile />
+      <Title content={strText}/>
     </React.Suspense>
   );
 });
 
 test('should render properly', async () => {
-  const { getByText } = render(component);
+  const { getByText } = render(component('test'));
 
-  const lazyElement = await waitFor(() => getByText(/Junior Software Engineer/i));
+  const lazyElement = await waitFor(() => getByText(/test/i));
 
   expect(lazyElement).toBeInTheDocument();
 });

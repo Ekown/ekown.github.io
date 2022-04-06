@@ -1,11 +1,13 @@
+$button-color: #4589ed;
+
 a.ghost-button {
-    color: #644cad;
+    color: $button-color;
 	text-decoration: none;
 	transition: 0.3s ease all;
 	display: inline-block;
 	text-align: center;
 	font-weight: 400;
-	border: 3px solid #644cad;
+	border: 3px solid $button-color;
 	border-radius: 2px;
 	position: relative;
 	box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1);
@@ -26,7 +28,7 @@ a.ghost-button {
         bottom: 0;
         opacity: 0;
         content: '';
-        background-color: #644cad;
+        background-color: $button-color;
         z-index: -1;
     }
 

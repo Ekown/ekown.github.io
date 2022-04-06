@@ -1,0 +1,46 @@
+.profile {
+    :global {
+        .picture-row {
+            @include responsive('width', '170px', '170px', '200px', '200px', '200px');
+
+            .picture {
+                background-image: url('../../../../assets/img/profile.jpg');
+                background-size: cover;
+                border-radius: 50%;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                display: block;
+                width: 100%;
+                height: 0;
+                padding-bottom: 100%;
+            }
+        }
+
+        .text {
+            font-size: 17px;
+            max-width: 650px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            line-height: 1.7;
+        }
+
+        a {
+            font-weight: 500;
+            color: #00009C;
+            transition: all .2s ease-in-out;
+            text-decoration: none;
+
+            &:hover, &:focus, &:active {
+                color: #0000DD;
+
+                &:not(:focus) {
+                    outline: 0;
+                }
+
+                &:not(:active) {
+                    text-decoration: underline;
+                }
+            }
+        }
+    } 
+}

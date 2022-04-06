@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Experience.module.scss';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { SKILL_LEVELS } from '../../../core/constants/skill-levels';
-import { SKILLS } from '../../../core/enums/skills';
-import { generateVariant } from '../../../core/helpers/utils';
+import { SKILL_LEVELS } from '../../../../core/constants/skill-levels';
+import { SKILLS } from '../../../../core/enums/skills';
+import { generateVariant } from '../../../../core/helpers/utils';
 import { useInView } from 'react-intersection-observer';
-import { useInterval } from '../../../core/hooks/use-interval';
+import { useInterval } from '../../../../core/hooks/use-interval';
 
 const Experience = () => {
   const [progress, setProgress] = useState(0);
@@ -42,14 +42,9 @@ const Experience = () => {
   }
 
   return (
-    <div className={styles.experience + ' container'}>
+    <div className={styles.experience + ' container mt-4'}>
       <div className="row">
-        <div className="col-12 tech-content">
-          <div className="row legend-row">
-            <div className="col-4 legend-col"><span className="legend legend--b"></span><span className="legend-text"> - Beginner</span></div>
-            <div className="col-4 legend-col"><span className="legend legend--i"></span><span className="legend-text"> - Intermediate</span></div>
-            <div className="col-4 legend-col"><span className="legend legend--p"></span><span className="legend-text"> - Professional</span></div>
-          </div>
+        <div className="col-12 tech-content mt-4">
           <div ref={ref}>
             {arProgressBars}
           </div>

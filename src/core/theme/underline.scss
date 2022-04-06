@@ -9,7 +9,7 @@
         left: 50%;
         bottom: -3px;
         width: 0;
-        height: 4px;
+        height: 2px;
         opacity: 0;
         background-color: #444649;
         transform: translate(-50%, 0);
@@ -19,7 +19,7 @@
 
 .underline-active {
     &::after {
-        width: 60%;
+        width: 30%;
         opacity: 1;
     }
 }
