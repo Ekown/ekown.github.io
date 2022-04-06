@@ -1,7 +1,6 @@
 .experience {
     :global {
         .tech-content {
-            // @include responsive('margin-top', '50px', '50px', '50px', '70px', '70px');
             @include responsive('margin-bottom', '30px');
 
             .row:not(.legend-row) {

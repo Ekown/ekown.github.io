@@ -13,9 +13,7 @@ const About = () => {
   return (
     <section>
       <div className={styles.about + ' container'} name="about" ref={ref}>
-        <div className={'underline' + (inView ? ' underline-active' : '')}>
-          <Title content="about" />
-        </div>
+        <Title content="about" inView={inView} />
         <div className="content">
           <Profile />
         </div>
