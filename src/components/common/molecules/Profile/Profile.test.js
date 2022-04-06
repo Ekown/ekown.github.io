@@ -17,7 +17,7 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/Junior Software Engineer/i));
+  const lazyElement = await waitFor(() => getByText(/Hi! My name is Eron and I'm a software engineer with a passion for improving old ideas and creating new exciting stuff./i));
 
   expect(lazyElement).toBeInTheDocument();
 });
