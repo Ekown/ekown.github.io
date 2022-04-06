@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import Profile from '../../common/Profile/Profile';
-import Experience from '../../common/Experience/Experience';
+import Profile from '../../common/molecules/Profile/Profile';
+import Experience from '../../common/molecules/Experience/Experience';
 import styles from './About.module.scss';
 
 const About = () => {

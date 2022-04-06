@@ -4,4 +4,10 @@
     padding-bottom: 2.5rem;
     margin-top: 1rem;
     margin-bottom: 1rem;
+
+    :global {
+        .title {
+            @include responsive('font-weight', '400');
+        }
+    }    
 }

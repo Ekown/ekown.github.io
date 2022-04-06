@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import styles from './Experience.module.scss';
 import ProgressBar from 'react-bootstrap/ProgressBar';
-import { SKILL_LEVELS } from '../../../core/constants/skill-levels';
-import { SKILLS } from '../../../core/enums/skills';
-import { generateVariant } from '../../../core/helpers/utils';
+import { SKILL_LEVELS } from '../../../../core/constants/skill-levels';
+import { SKILLS } from '../../../../core/enums/skills';
+import { generateVariant } from '../../../../core/helpers/utils';
 import { useInView } from 'react-intersection-observer';
-import { useInterval } from '../../../core/hooks/use-interval';
+import { useInterval } from '../../../../core/hooks/use-interval';
 
 const Experience = () => {
   const [progress, setProgress] = useState(0);

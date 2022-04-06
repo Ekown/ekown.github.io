@@ -5,6 +5,15 @@
 @import "~bootstrap/scss/bootstrap";
 
 .title {
-    @include responsive('font-size', '40px', '45px', '50px', '55px', '60px');
+    @include responsive('font-size', '22px', '30px', '30px', '30px', '30px');
     @include responsive('padding-top', null, null, '50px!', '55px!', '60px!');
+}
+
+.h-center {
+    margin: 0 auto;
+}
+
+.container {
+    @include responsive('width', null, '95%', '95%', '95%', '95%');
+    @include responsive('--bs-gutter-x', '1.5rem', null, null, null, null);
 }

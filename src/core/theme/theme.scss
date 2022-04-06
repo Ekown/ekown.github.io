@@ -1,3 +1,6 @@
 $body-color: #fff;
 $body-font-weight: 400;
 $font-family-sans-serif: 'Raleway', sans-serif;
+
+// Removes the default gutter in the x-axis for rows
+$grid-gutter-width: 0;
