@@ -19,36 +19,39 @@ const Home = () => {
   }
 
   return (
-    <div className={style.home}>
-      <div className="snowfield">
-        <Snow />
-      </div>
-      
-      <div className="content container">
-        <div className="row">
-          <div className="text px-4 px-sm-1">
-            Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+    <section>
+      <div className={style.home}>
+        <div className="snowfield">
+          <Snow />
+        </div>
+
+        <div className="content container">
+          <div className="row">
+            <div className="text px-4 px-sm-1">
+              Hi, I'm <span className="name">Eron Tancioco</span>.<br />I'm a <Typewriter options={objTypewriterConfig} />
+            </div>
+          </div>
+          <div className="row">
+            <div className="button pt-1">
+              <Link
+                className="ghost-button"
+                activeClass="active"
+                to="about"
+                spy={false}
+                hashSpy={false}
+                smooth={false}
+                isDynamic={true}
+                delay={0}
+                offset={0}
+                duration={700}
+                onClick={handleClick}
+              >See More<FontAwesomeIcon icon="arrow-right" /></Link>
+            </div>
           </div>
         </div>
-        <div className="row">
-          <div className="button pt-1">
-            <Link
-              className="ghost-button"
-              activeClass="active"
-              to="about"
-              spy={false}
-              hashSpy={false}
-              smooth={false}
-              isDynamic={true}
-              delay={0}
-              offset={0}
-              duration={700}
-              onClick={handleClick}
-            >See More<FontAwesomeIcon icon="arrow-right" /></Link>
-          </div>
-        </div>
       </div>
-    </div>
+    </section>
+
   )
 };
 

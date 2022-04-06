@@ -42,14 +42,9 @@ const Experience = () => {
   }
 
   return (
-    <div className={styles.experience + ' container'}>
+    <div className={styles.experience + ' container mt-4'}>
       <div className="row">
-        <div className="col-12 tech-content">
-          <div className="row legend-row">
-            <div className="col-4 legend-col"><span className="legend legend--b"></span><span className="legend-text"> - Beginner</span></div>
-            <div className="col-4 legend-col"><span className="legend legend--i"></span><span className="legend-text"> - Intermediate</span></div>
-            <div className="col-4 legend-col"><span className="legend legend--p"></span><span className="legend-text"> - Professional</span></div>
-          </div>
+        <div className="col-12 tech-content mt-4">
           <div ref={ref}>
             {arProgressBars}
           </div>
