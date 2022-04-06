@@ -2,8 +2,6 @@ import React from 'react';
 import Experience from './Experience';
 import { render, cleanup, waitFor } from '@testing-library/react';
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
-import { SKILL_LEVELS } from '../../../core/constants/skill-levels';
-import { SKILLS } from '../../../core/enums/skills';
 
 afterEach(cleanup);
 
