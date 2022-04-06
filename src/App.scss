@@ -12,3 +12,13 @@
     @include responsive('width', null, '95%', '95%', '95%', '95%');
     @include responsive('--bs-gutter-x', '1.25rem', null, null, null, null);
 }
+
+section {
+    &:nth-child(even) {
+        background-color: #fff;
+    }
+
+    &:nth-child(odd) {
+        background-color: #F0F0F0;
+    }
+}
