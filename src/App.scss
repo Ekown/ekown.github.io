@@ -4,11 +4,6 @@
 
 @import "~bootstrap/scss/bootstrap";
 
-.title {
-    @include responsive('font-size', '22px', '30px', '30px', '30px', '30px');
-    @include responsive('padding-top', null, null, '50px!', '55px!', '60px!');
-}
-
 .h-center {
     margin: 0 auto;
 }
