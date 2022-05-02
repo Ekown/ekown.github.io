@@ -3,59 +3,45 @@
         .tech-content {
             @include responsive('margin-bottom', '30px');
 
-            .row:not(.legend-row) {
+            .row {
                 margin-bottom: 15px;
             }
-        }
 
-        .progress-label {
-            @include responsive('font-size', '10px', '14px', '16px', '17px', '18px');
-        }
-
-        .progress {
-            background-color: #d2d4d6;
-
-            @include responsive('height', '1rem', '1.2rem', '1.4rem', '1.6rem', '1.8rem');
-        }
-        
-        .progress-bar {
-            border: 1px solid black;
-            border-radius: inherit;
-        }
-
-        .legend-row {
-            @include responsive('margin-bottom', '10px', '20px', '25px', '30px', '35px');
-
-            .legend {
-                border-radius: 1rem;
-                display: inline-block;
-                vertical-align: middle;
-
-                @include responsive('width', '10px', '13px', '15px', '17px', '22px');
-                @include responsive('height', '10px', '13px', '15px', '17px', '22px');
-                @include responsive('margin-top', '-2px', '-3px', '-5px', '-7px', '-10px');
-
-                &--b {
-                    background-color: #5050e4;
+            .skill {
+                &__label {                    
+                    @include responsive('margin-top', '30px');
+                    @include responsive('font-size', '16px');
+                    font-family: "Lato", sans-serif;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin: 0 0 50px;
+                    line-height: 1.5;
+                    text-align: center;
                 }
-                
-                &--i {
-                    background-color: #1ab51a;
-                }
-                
-                &--p {
-                    background-color: #f75050;
-                }
-            }
 
-            .legend-text {
-                font-style: italic;
+                &__logos {
+                    flex-flow: row wrap;
+                    gap: 1.5em 2em;
+                    flex: 1 1 auto;
+                    justify-content: space-evenly;
 
-                @include responsive('font-size', '13px', '13px', '15px', '17px', '22px');
-            }
-    
-            .legend-col {
-                padding: 0;
+                    .logo-col {
+                        // padding-bottom: 0;
+                        // height: 100px;
+
+                        .logo {
+                            @include responsive('width', '100%', '55px', '55px', '55px', '55px');
+                            max-width: 100%;
+                            background-size: cover;
+                            height: auto;
+                            display: block;
+                            margin: 0 auto;
+                            transition: all .3s ease-in-out;
+                        }
+                    }
+                }
             }
         }
     }

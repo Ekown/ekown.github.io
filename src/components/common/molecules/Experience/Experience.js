@@ -1,52 +1,42 @@
-import React, { useState } from 'react';
+import React, { lazy } from 'react';
 import styles from './Experience.module.scss';
-import ProgressBar from 'react-bootstrap/ProgressBar';
-import { SKILL_LEVELS } from '../../../../core/constants/skill-levels';
-import { SKILLS } from '../../../../core/enums/skills';
-import { generateVariant } from '../../../../core/helpers/utils';
-import { useInView } from 'react-intersection-observer';
-import { useInterval } from '../../../../core/hooks/use-interval';
+import html from '../../../../assets/logo/html.png';
+import css from '../../../../assets/logo/css.png';
+import js from '../../../../assets/logo/js.png';
+import php from '../../../../assets/logo/php.png';
+import typescript from '../../../../assets/logo/typescript.png';
+import mysql from '../../../../assets/logo/mysql.png';
+import { Image } from 'react-bootstrap';
 
 const Experience = () => {
-  const [progress, setProgress] = useState(0);
-  const [ref, inView] = useInView({
-    threshold: 0.5,
-    triggerOnce: true,
-  });
-  let arProgressBars = [];
-
-  useInterval(() => {
-    if (inView && progress < 100) {
-      setProgress(progress => progress + 1);
-    }
-  }, 0);
-
-  // Loop through all the defined skills to create the Progress Bars
-  for (let prop in SKILLS) {
-    let strSkill = SKILLS[prop];
-    let intSkillLevel = SKILL_LEVELS[strSkill];
-
-    if (typeof intSkillLevel === 'number') {
-      intSkillLevel = intSkillLevel * progress;
-      let objProgressBar = (
-        <div className="row" key={prop}>
-          <div className="col-2 progress-label">{strSkill}</div>
-          <div className="col-10">
-            <ProgressBar striped variant={generateVariant(intSkillLevel)} now={intSkillLevel} />
-          </div>
-        </div>
-      );
-
-      arProgressBars.push(objProgressBar);
-    }
-  }
-
   return (
     <div className={styles.experience + ' container mt-4'}>
       <div className="row">
         <div className="col-12 tech-content mt-4">
-          <div ref={ref}>
-            {arProgressBars}
+          <div className="row skill">
+            <div className="col-12">
+              <h3 className="row skill__label">Programming Languages</h3>
+              <div className="row skill__logos">
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={html} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={css} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={js} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={php} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={typescript} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={mysql} fluid={true} className="logo" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

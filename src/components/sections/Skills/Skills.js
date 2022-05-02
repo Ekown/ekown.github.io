@@ -15,6 +15,9 @@ const Skills = () => {
       <div className={ styles.skills + ' container' } name="skills" ref={ref}>
         <Title content="skills" inView={inView} />
         <div className="content">
+          <div>
+            Here are some of the technologies that I've worked with for the past n years.
+          </div>
           <Experience />
         </div> 
       </div>
