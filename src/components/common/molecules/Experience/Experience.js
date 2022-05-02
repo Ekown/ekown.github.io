@@ -1,4 +1,4 @@
-import React, { lazy } from 'react';
+import React from 'react';
 import styles from './Experience.module.scss';
 import html from '../../../../assets/logo/html.png';
 import css from '../../../../assets/logo/css.png';

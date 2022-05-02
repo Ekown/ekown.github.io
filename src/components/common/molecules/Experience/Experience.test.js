@@ -20,7 +20,7 @@ test('should render properly', async () => {
 
   const lazyElement = await waitFor(() => getAllByText(/Programming Languages|Libraries & Frameworks|Tools & Platforms/i));
 
-  expect(lazyElement).toBeInTheDocument();
+  expect(lazyElement.length).toBeGreaterThanOrEqual(1);
 });
 
 // test('should have progressbars', async () => {
