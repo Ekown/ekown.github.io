@@ -6,17 +6,25 @@ import js from '../../../../assets/logo/js.png';
 import php from '../../../../assets/logo/php.png';
 import typescript from '../../../../assets/logo/typescript.png';
 import mysql from '../../../../assets/logo/mysql.png';
+import jquery from '../../../../assets/logo/jquery.png';
+import sass from '../../../../assets/logo/sass.png';
+import react from '../../../../assets/logo/react.png';
+import laravel from '../../../../assets/logo/laravel.png';
+import nodejs from '../../../../assets/logo/nodejs.png';
+import angular from '../../../../assets/logo/angular.png';
+import ionic from '../../../../assets/logo/ionic.png';
 import { Image } from 'react-bootstrap';
 
+// TODO: Add a way to store the logos in an array/object for maintainability
 const Experience = () => {
   return (
     <div className={styles.experience + ' container mt-4'}>
       <div className="row">
         <div className="col-12 tech-content mt-4">
-          <div className="row skill">
+          <div className="row programming-languages">
             <div className="col-12">
-              <h3 className="row skill__label">Programming Languages</h3>
-              <div className="row skill__logos">
+              <h3 className="row programming-languages__label">Programming Languages</h3>
+              <div className="row programming-languages__logos">
                 <div className="col-3 col-sm-2 col-md-2 d-flex">
                   <Image src={html} fluid={true} className="logo" />
                 </div>
@@ -34,6 +42,34 @@ const Experience = () => {
                 </div>
                 <div className="col-3 col-sm-2 col-md-2 d-flex">
                   <Image src={mysql} fluid={true} className="logo" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="row libraries-framework">
+            <div className="col-12">
+              <h3 className="row libraries-framework__label">Libraries & Frameworks</h3>
+              <div className="row libraries-framework__logos">
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={jquery} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={sass} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={react} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={laravel} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={nodejs} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={angular} fluid={true} className="logo" />
+                </div>
+                <div className="col-3 col-sm-2 col-md-2 d-flex">
+                  <Image src={ionic} fluid={true} className="logo" />
                 </div>
               </div>
             </div>
