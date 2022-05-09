@@ -6,7 +6,7 @@ import { SKILLS } from '../../../../core/constants/skills';
 const Experience = () => {
   const arSkillRows = [];
 
-  SKILLS.map((objValue, intKey) => {
+  SKILLS.map((objValue, intKey) => (
     arSkillRows.push(
       <div className="row skill" key={intKey}>
         <div className="col-12">
@@ -22,8 +22,8 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    );
-  });
+    )
+  ));
 
   return (
     <div className={styles.experience + ' container mt-4'}>
