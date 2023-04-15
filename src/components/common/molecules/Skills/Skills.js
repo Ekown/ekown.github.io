@@ -9,20 +9,18 @@ const Skills = () => {
 
   SKILLS.map((objValue, intKey) => (
     arSkillRows.push(
-      <div className="row skill" key={intKey}>
-        <div className="col-12">
+        <div className={"col-12 " + (intKey !== 0 ? "col-lg-6" : "") + (intKey === 0 ? "mb-3" : "")} key={intKey}>
           <h3 className="row skill__label">{objValue.id}</h3>
           <div className="row skill__logos">
             {
               objValue.subskills.map((objSkill, intSubskillKey) => (
-                <div className="logo-col col-3 col-sm-2 col-md-2 d-flex" key={intKey + intSubskillKey}>
+                <div className={"logo-col col-3 col-sm-2 col-md-2 d-flex " + (intKey !== 0 ? "col-lg-4" : "")} key={intKey + intSubskillKey}>
                   <Image src={objSkill} fluid={true} className="logo" />
                 </div>
               ))
             }
           </div>
         </div>
-      </div>
     )
   ));
 
@@ -34,7 +32,7 @@ const Skills = () => {
           <div className="row work__logos">
             {
               objValue.employments.map((objSkill, intEmploymentKey) => (
-                <div className="logo-col col-12 d-flex" key={intKey + intEmploymentKey}>
+                <div className="logo-col col-12 col-sm-12 col-md-3 col-lg-12 d-flex" key={intKey + intEmploymentKey}>
                   <a href={objValue.links[intEmploymentKey]} target='_new'>
                     <Image src={objSkill} fluid={true} className="logo" />
                   </a>
@@ -50,8 +48,10 @@ const Skills = () => {
   return (
     <div className={styles.skills + ' container mt-4'}>
       <div className="row">
-        <div className="col-12 tech-content mt-4">{arSkillRows}</div>
-        <div className="col-12 work-content mt-4">{arWorkRows}</div>
+        <div className="col-12 col-lg-8 tech-content mt-3">
+          <div className="row skill">{arSkillRows}</div>
+        </div>
+        <div className="col-12 col-lg-4 work-content mt-3">{arWorkRows}</div>
       </div>
     </div>
   );
