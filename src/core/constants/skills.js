@@ -23,7 +23,7 @@ import cognito from '../../assets/logo/skills/cognito.png';
 
 export const SKILLS = [
     {
-        id: 'Programming and Scripting Languages',
+        id: 'Programming & Scripting Languages',
         subskills: [
             html,
             css,
