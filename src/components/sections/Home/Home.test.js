@@ -17,7 +17,7 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/Eron Tancioco/i));
+  const lazyElement = await waitFor(() => getByText(/^Eron Tancioco$/i));
 
   expect(lazyElement).toBeInTheDocument();
 });
@@ -31,7 +31,7 @@ test('should show the typewriter component', async () => {
 test('should show see more button', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/See More/i));
+  const lazyElement = await waitFor(() => getByText(/^See More$/i));
 
   expect(lazyElement).toBeInTheDocument();
   expect(lazyElement.getElementsByClassName('fa-arrow-right').length).toBe(1);

@@ -1,0 +1,62 @@
+.skills {
+    :global {
+        .tech-content, .work-content {
+            .work-content {
+                @include responsive('margin-bottom', '30px');
+            }
+
+            .row {
+                @include responsive('margin-bottom', '15px', '40px', '20px', '20px', '20px');
+            }
+
+            .skill, .work {
+                &__label {                    
+                    @include responsive('margin-top', '30px');
+                    @include responsive('font-size', '16px');
+                    font-family: "Lato", sans-serif;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-size: 18px;
+                    margin: 0 0 50px;
+                    line-height: 1.5;
+                    justify-content: center;
+                }
+
+                &__logos {
+                    flex-flow: row wrap;
+                    flex: 1 1 auto;
+                    @include responsive('justify-content', 'space-evenly', 'center', 'center', 'center', 'center');
+                    @include responsive('gap', '2.5em 1em', '2.5em .25em', '2.5em .25em', '1em 0', '1em 0');
+
+                    .logo-col {
+                        @include responsive('align-items', 'center', 'center', 'center', 'center', 'center');
+
+                        .logo {
+                            @include responsive('width', '100%', '55px', '55px', '55px', '55px');
+                            @include responsive('height', 'auto', 'fit-content', 'fit-content', 'fit-content', 'fit-content');
+                            max-width: 100%;
+                            background-size: cover;
+                            display: block;
+                            margin: 0 auto;
+                            transition: all .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .work {
+                &__logos {
+                    .logo-col {
+                        margin-bottom: 2rem;
+                        justify-content: center;
+
+                        .logo {
+                            @include responsive('width', '200px!', '150px!', '100px!', '200px!', '200px!');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

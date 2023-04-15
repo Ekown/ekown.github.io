@@ -5,7 +5,7 @@ const Profile = () => {
   return (
     <div className={ styles.profile + " row mt-md-4" }>
       <div className="row">
-        <div className="col-12 picture-row h-center mt-4">
+        <div className="col-12 picture-row h-center">
           <div className="picture"></div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import styles from './Title.module.scss';
 const Title = (props) => {
   return (
     <div className={ styles.title + ' underline ' + (props.inView ? ' underline-active ' : '')}>
-      <h2 className="pt-3">{ props.content }</h2>
+      <h2 className="pt-3 mb-5">{ props.content }</h2>
     </div>
   );
 }

@@ -6,7 +6,7 @@ import Title from '../../common/atoms/Title/Title';
 
 const About = () => {
   const [ref, inView] = useInView({
-    threshold: 0.5,
+    threshold: 0.1,
     triggerOnce: true,
   });
 
