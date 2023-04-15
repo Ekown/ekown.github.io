@@ -1,10 +1,10 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
-import Experience from '../../common/molecules/Experience/Experience';
-import styles from './Skills.module.scss';
+import Skills from '../../common/molecules/Skills/Skills';
+import styles from './Experience.module.scss';
 import Title from '../../common/atoms/Title/Title';
 
-const Skills = () => {
+const Experience = () => {
   const [ref, inView] = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -12,21 +12,21 @@ const Skills = () => {
 
   return (
     <section>
-      <div className={ styles.skills + ' container' } name="skills" ref={ref}>
-        <Title content="skills" inView={inView} />
+      <div className={ styles.experience + ' container' } name="experience" ref={ref}>
+        <Title content="experience" inView={inView} />
         <div className="content">
           <div>
             Here are some of the technologies that I've worked with for the past n years.
           </div>
-          <Experience />
+          <Skills />
         </div> 
       </div>
     </section>
   );
 }
 
-Skills.propTypes = {};
+Experience.propTypes = {};
 
-Skills.defaultProps = {};
+Experience.defaultProps = {};
 
-export default Skills;
+export default Experience;

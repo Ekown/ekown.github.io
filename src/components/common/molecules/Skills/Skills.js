@@ -1,9 +1,9 @@
 import React from 'react';
-import styles from './Experience.module.scss';
+import styles from './Skills.module.scss';
 import { Image } from 'react-bootstrap';
 import { SKILLS } from '../../../../core/constants/skills';
 
-const Experience = () => {
+const Skills = () => {
   const arSkillRows = [];
 
   SKILLS.map((objValue, intKey) => (
@@ -14,7 +14,7 @@ const Experience = () => {
           <div className="row skill__logos">
           {
             objValue.subskills.map((objSkill, intSubskillKey) => (
-              <div className="col-3 col-sm-2 col-md-2 d-flex" key={intKey + intSubskillKey}>
+              <div className="logo-col col-3 col-sm-2 col-md-2 d-flex" key={intKey + intSubskillKey}>
                 <Image src={objSkill} fluid={true} className="logo" />
               </div>
             ))
@@ -26,7 +26,7 @@ const Experience = () => {
   ));
 
   return (
-    <div className={styles.experience + ' container mt-4'}>
+    <div className={styles.skills + ' container mt-4'}>
       <div className="row">
         <div className="col-12 tech-content mt-4">{arSkillRows}</div>
       </div>
@@ -34,8 +34,8 @@ const Experience = () => {
   );
 }
 
-Experience.propTypes = {};
+Skills.propTypes = {};
 
-Experience.defaultProps = {};
+Skills.defaultProps = {};
 
-export default Experience;
+export default Skills;

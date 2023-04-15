@@ -1,5 +1,5 @@
 import React from 'react';
-import Experience from './Experience';
+import Skills from './Skills';
 import { render, cleanup, waitFor, getAllByText } from '@testing-library/react';
 import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 
@@ -10,7 +10,7 @@ let component;
 beforeEach(() => {
   component = (
     <React.Suspense fallback="loading">
-      <Experience />
+      <Skills />
     </React.Suspense>
   );
 });
