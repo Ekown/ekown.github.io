@@ -47,6 +47,7 @@
     ]
   },
   "devDependencies": {
+    "jest-watch-typeahead": "^0.6.5",
     "react-scripts": "5.0.0"
   }
 }

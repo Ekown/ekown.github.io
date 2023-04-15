@@ -18,7 +18,7 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/Experience/i));
+  const lazyElement = await waitFor(() => getByText(/^Experience$/i));
 
   expect(lazyElement).toBeInTheDocument();
 });
@@ -28,7 +28,7 @@ test('should add active class to title when the component is in view', async() =
 
   mockAllIsIntersecting(true);
 
-  const lazyElement = await waitFor(() => getByText(/Experience/i));
+  const lazyElement = await waitFor(() => getByText(/^Experience$/i));
 
   expect(lazyElement.closest('div.underline')).toBeInTheDocument();
   expect(lazyElement.closest('div.underline').classList.contains('underline-active')).toBe(true);

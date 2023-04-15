@@ -18,7 +18,7 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getAllByText } = render(component);
 
-  const lazyElement = await waitFor(() => getAllByText(/Programming Languages|Libraries & Frameworks|Tools & Platforms/i));
+  const lazyElement = await waitFor(() => getAllByText(/Programming Languages|Libraries & Frameworks|Tools & Platforms|Work Experience/i));
 
   expect(lazyElement.length).toBeGreaterThanOrEqual(1);
 });
