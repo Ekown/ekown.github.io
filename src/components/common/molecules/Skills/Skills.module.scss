@@ -1,13 +1,15 @@
 .skills {
     :global {
-        .tech-content {
-            @include responsive('margin-bottom', '30px');
+        .tech-content, .work-content {
+            .work-content {
+                @include responsive('margin-bottom', '30px');
+            }
 
             .row {
                 @include responsive('margin-bottom', '15px', '20px', '20px', '20px', '20px');
             }
 
-            .skill {
+            .skill, .work {
                 &__label {                    
                     @include responsive('margin-top', '30px');
                     @include responsive('font-size', '16px');
@@ -38,6 +40,19 @@
                             display: block;
                             margin: 0 auto;
                             transition: all .3s ease-in-out;
+                        }
+                    }
+                }
+            }
+
+            .work {
+                &__logos {
+                    .logo-col {
+                        margin-bottom: 2rem;
+                        justify-content: center;
+
+                        .logo {
+                            width: 200px !important;
                         }
                     }
                 }

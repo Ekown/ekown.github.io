@@ -1,10 +1,11 @@
 import React from 'react';
 import styles from './Skills.module.scss';
-import { Image } from 'react-bootstrap';
+import { Image, } from 'react-bootstrap';
 import { SKILLS } from '../../../../core/constants/skills';
+import { WORKS } from '../../../../core/constants/works';
 
 const Skills = () => {
-  const arSkillRows = [];
+  const arSkillRows = [], arWorkRows = [];
 
   SKILLS.map((objValue, intKey) => (
     arSkillRows.push(
@@ -12,13 +13,34 @@ const Skills = () => {
         <div className="col-12">
           <h3 className="row skill__label">{objValue.id}</h3>
           <div className="row skill__logos">
-          {
-            objValue.subskills.map((objSkill, intSubskillKey) => (
-              <div className="logo-col col-3 col-sm-2 col-md-2 d-flex" key={intKey + intSubskillKey}>
-                <Image src={objSkill} fluid={true} className="logo" />
-              </div>
-            ))
-          }
+            {
+              objValue.subskills.map((objSkill, intSubskillKey) => (
+                <div className="logo-col col-3 col-sm-2 col-md-2 d-flex" key={intKey + intSubskillKey}>
+                  <Image src={objSkill} fluid={true} className="logo" />
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    )
+  ));
+
+  WORKS.map((objValue, intKey) => (
+    arWorkRows.push(
+      <div className="row work" key={intKey}>
+        <div className="col-12">
+          <h3 className="row work__label">{objValue.id}</h3>
+          <div className="row work__logos">
+            {
+              objValue.employments.map((objSkill, intEmploymentKey) => (
+                <div className="logo-col col-12 d-flex" key={intKey + intEmploymentKey}>
+                  <a href={objValue.links[intEmploymentKey]} target='_new'>
+                    <Image src={objSkill} fluid={true} className="logo" />
+                  </a>
+                </div>
+              ))
+            }
           </div>
         </div>
       </div>
@@ -29,6 +51,7 @@ const Skills = () => {
     <div className={styles.skills + ' container mt-4'}>
       <div className="row">
         <div className="col-12 tech-content mt-4">{arSkillRows}</div>
+        <div className="col-12 work-content mt-4">{arWorkRows}</div>
       </div>
     </div>
   );
