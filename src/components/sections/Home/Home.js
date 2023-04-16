@@ -1,8 +1,9 @@
-import React, { lazy } from 'react';
+import React, { lazy, useEffect } from 'react';
 import style from './Home.module.scss';
 import Typewriter from 'typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Link } from "react-scroll";
+import { useInView } from 'react-intersection-observer';
 
 const Home = () => {
   const Snow = lazy(() => import('../../common/atoms/Snow/Snow'));
@@ -13,6 +14,17 @@ const Home = () => {
     wrapperClassName: 'typewrite', // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
   };
 
+  const [ref, inView] = useInView({
+    threshold: 0.1,
+    triggerOnce: false,
+  });
+
+  useEffect(() => {
+    if (inView) {
+      document.title = 'Eron Tancioco | Welcome';
+    }
+  }, [inView]);
+
   // Removes the focus from the button when clicked
   const handleClick = (evt) => {
     evt.target.blur();
@@ -20,7 +32,7 @@ const Home = () => {
 
   return (
     <section>
-      <div className={style.home}>
+      <div className={style.home} ref={ref}>
         <div className="snowfield">
           <Snow />
         </div>
