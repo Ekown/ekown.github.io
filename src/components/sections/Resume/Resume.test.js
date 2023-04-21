@@ -18,18 +18,24 @@ beforeEach(() => {
 test('should render properly', async () => {
   const { getByText } = render(component);
 
-  const lazyElement = await waitFor(() => getByText(/^Resume$/i));
+  const lazyElement = await waitFor(() => getByText(/^Grab a copy of my Résumé$/i));
 
   expect(lazyElement).toBeInTheDocument();
 });
 
-test('should add active class to title when the component is in view', async() => {
+test('it should render a "Grab a Copy" button', async() => {
   const { getByText } = render(component);
 
-  mockAllIsIntersecting(true);
+  const lazyElement = await waitFor(() => getByText(/^Get a copy$/i));
 
-  const lazyElement = await waitFor(() => getByText(/^Resume$/i));
+  expect(lazyElement).toBeInTheDocument();
+});
 
-  expect(lazyElement.closest('div.underline')).toBeInTheDocument();
-  expect(lazyElement.closest('div.underline').classList.contains('underline-active')).toBe(true);
+test('it should have a "Grab a Copy" button that will open a link in new tab', async() => {
+  const { getByText } = render(component);
+
+  const lazyElement = await waitFor(() => getByText(/^Get a copy$/i));
+
+  expect(lazyElement).toHaveAttribute('href', 'https://drive.google.com/file/d/1xCAwG-dP1UN91C--NvcDqwwsM9IpDLn2/view?usp=share_link');
+  expect(lazyElement).toHaveAttribute('target', '_blank');
 });

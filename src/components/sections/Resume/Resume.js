@@ -24,7 +24,7 @@ const Resume = () => {
           <div className="col-12">
             <h2 className="sub-text">Grab a copy of my Résumé</h2>
             <div className="button">
-              <a className="ghost-button">Get a copy</a>
+              <a className="ghost-button" href="https://drive.google.com/file/d/1xCAwG-dP1UN91C--NvcDqwwsM9IpDLn2/view?usp=share_link" target="_blank">Get a copy</a>
             </div>
           </div>
         </div>
