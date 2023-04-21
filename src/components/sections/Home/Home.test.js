@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './Home';
 import { render, cleanup, waitFor, fireEvent } from '@testing-library/react';
+import { mockAllIsIntersecting } from 'react-intersection-observer/test-utils'
 
 afterEach(cleanup);
 
