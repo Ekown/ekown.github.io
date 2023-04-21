@@ -10,6 +10,7 @@ const Experience = () => {
     threshold: 0.1,
     triggerOnce: false,
   });
+  const workingYears = (new Date()).getFullYear() - 2018;
 
   useEffect(() => {
     if (inView) {
@@ -25,7 +26,7 @@ const Experience = () => {
         <Title content="experience" inView={triggerTitle} />
         <div className="content">
           <div>
-            Here are some of the technologies that I've worked with for the past n years.
+            Here are some of the technologies that I've worked with for the past { workingYears } years.
           </div>
           <Skills />
         </div> 
