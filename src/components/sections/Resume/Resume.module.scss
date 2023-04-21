@@ -1,0 +1,40 @@
+$button-bg-color: #fff;
+
+.resume { 
+    background-color: black;
+    padding: 5rem 0;
+
+    :global {
+        .row {
+            margin: 0 1rem;
+
+            .sub-text {
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+
+                @include responsive('font-size', '22px', '30px', '30px', '30px', '30px');
+                @include responsive('font-weight', '500', '300', '300', '300', '300');
+            }
+
+            .ghost-button {
+                text-transform: capitalize;
+                color: #fff;
+                border-color: $button-bg-color;
+                padding: 10px 30px;
+                letter-spacing: 1px;
+                max-width: 162px;
+                font-size: 16px;
+                
+                @include responsive('width', '75%', '100%', '100%', '100%', '100%');
+
+                &:hover {
+                    color: black;
+                }
+
+                &:before {
+                    background-color: $button-bg-color;
+                }
+            }
+        }
+    }
+}
