@@ -33,3 +33,14 @@ test('should add active class to title when the component is in view', async() =
   expect(lazyElement.closest('div.underline')).toBeInTheDocument();
   expect(lazyElement.closest('div.underline').classList.contains('underline-active')).toBe(true);
 });
+
+test('should change title', async () => {
+  const { getByText } = render(component);
+
+  const lazyElement = await waitFor(() => getByText(/^Experience$/i));
+
+  mockAllIsIntersecting(true);
+
+  expect(lazyElement).toBeInTheDocument();
+  expect(document.title).toBe('Eron Tancioco | Experience');
+});
