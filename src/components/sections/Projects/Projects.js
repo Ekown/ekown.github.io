@@ -3,7 +3,6 @@ import { useInView } from 'react-intersection-observer';
 import style from './Projects.module.scss';
 import Title from '../../common/atoms/Title/Title';
 import { PROJECTS } from '../../../core/constants/projects';
-import { Stack } from 'react-bootstrap';
 
 const Projects = () => {
   const [triggerTitle, setTriggerTitle] = useState(false);
@@ -15,9 +14,12 @@ const Projects = () => {
 
   PROJECTS.map((objProjects, intKey) => (
     arProjects.push(
-      <div className="project-card" key={ 'project-' + intKey } style={{
+      <div className="project-card col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4" key={'project-' + intKey} style={{
         background: `url(${objProjects.photos[0]}) center center/cover`
       }} >
+        <div className="overlay">
+          <h2>{objProjects.name}</h2>
+        </div>
       </div>
     )
   ));
@@ -32,14 +34,10 @@ const Projects = () => {
 
   return (
     <section>
-      <div className={ style.projects } name="Projects" ref={ref}>
+      <div className={style.projects + ' container'} name="Projects" ref={ref}>
         <Title content="projects" inView={triggerTitle} />
         <div className="row">
-          <div className="col-12">
-            <Stack>
-            { arProjects }
-            </Stack>
-          </div>
+          {arProjects}
         </div>
       </div>
     </section>
