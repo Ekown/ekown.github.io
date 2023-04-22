@@ -4,5 +4,9 @@
     padding-bottom: 2.5rem;
 
     :global {
+        .project-card {
+            width: 100vw;
+            height: 240px;
+        }
     }
 }
