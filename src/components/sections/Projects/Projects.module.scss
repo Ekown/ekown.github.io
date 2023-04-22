@@ -8,17 +8,22 @@
             justify-content: center;
 
             .project-card {
-                transition: background 0.5s;
+                transition: background 0.3s ease-in-out;
                 @include responsive('width', '100vw');
                 @include responsive('max-width', '100vw');
                 @include responsive('height', '240px', '300px', '300px', '300px', '300px');
 
-                &:hover {
-                    background: #f0f0f0 !important;
-                    // opacity: 0;
+                .project-img {
+                    height: 100%;
+                    width: 100%;
+
+                    &:hover {
+                        background: #f0f0f0 !important;
+                    }
                 }
 
                 .overlay {
+                    color: #1b242f;
                     position: relative;
                     top: 50%;
                     left: 50%;

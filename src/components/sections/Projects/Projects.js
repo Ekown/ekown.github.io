@@ -14,11 +14,13 @@ const Projects = () => {
 
   PROJECTS.map((objProjects, intKey) => (
     arProjects.push(
-      <div className="project-card col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4" key={'project-' + intKey} style={{
-        background: `url(${objProjects.photos[0]}) center center/cover`
-      }} >
-        <div className="overlay">
-          <h2>{objProjects.name}</h2>
+      <div className="project-card col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4" key={'project-' + intKey} >
+        <div className="project-img" style={{
+          background: `url(${objProjects.photos[0]}) center center/cover`
+        }}>
+          <div className="overlay">
+            <h2>{objProjects.name}</h2>
+          </div>
         </div>
       </div>
     )
