@@ -12,13 +12,13 @@ const Projects = () => {
   });
   const arProjects = [];
 
-  PROJECTS.map((objProjects, intKey) => {
+  PROJECTS.map((objProjects, intKey) => (
     arProjects.push(
       <div key={ 'project-' + intKey }>
         { objProjects.name }
       </div>
-    );
-  });
+    )
+  ));
 
   useEffect(() => {
     if (inView) {
