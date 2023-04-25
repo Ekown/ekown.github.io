@@ -20,7 +20,7 @@ const Projects = () => {
             background: `url(${objProjects.photos[0]}) center center/cover`
           }}></div>
           <div className="card-text overlay">
-            <h2>{objProjects.name}</h2>
+            <div><strong>{objProjects.name}</strong></div>
             <span>{objProjects.stack.join(' / ')}</span>
           </div>
           <div className="card-button overlay">SEE MORE</div>

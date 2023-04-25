@@ -21,8 +21,6 @@
 
                     &:hover {
                         transition: background 0.3s ease-in-out;
-                        // background: #f0f0f0 !important;
-
                     }
                 }
 
@@ -31,6 +29,14 @@
                     position: absolute;
                     top: 0;
                     width: 100%;
+
+                    div {
+                        font-size: 16pt;
+                    }
+
+                    span {
+                        color: $complementary-color;
+                    }
                 }
 
                 .overlay {
@@ -46,14 +52,14 @@
                     left: 0;
                     position: absolute;
                     right: 0;
-                    border: 2px solid #e31b6d;
+                    border: 2px solid $complementary-color;
                     font-size: 13pt;
                     margin: 0 auto;
                     padding: 7px 0;
                     width: 170px;
 
                     &:hover {
-                        background: #e31b6d;
+                        background: $complementary-color;
                         color: #fff;
                         cursor: pointer;
                     }
