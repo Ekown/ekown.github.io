@@ -26,19 +26,15 @@
 
         a {
             font-weight: 500;
-            color: #00009C;
+            color: $primary-color;
             transition: all .2s ease-in-out;
             text-decoration: none;
 
             &:hover, &:focus, &:active {
-                color: #0000DD;
+                color: $highlight-color;
 
                 &:not(:focus) {
                     outline: 0;
-                }
-
-                &:not(:active) {
-                    text-decoration: underline;
                 }
             }
         }
