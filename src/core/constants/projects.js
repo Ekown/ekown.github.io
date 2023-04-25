@@ -8,17 +8,20 @@ export const PROJECTS = [
         photos: [
             wastelander_1,
         ],
+        stack: ['C#', 'Unity Engine'],
     },
     {
         name: 'My Developer Portfolio',
         photos: [
             portfolio_1,
         ],
+        stack: ['React', 'JS', 'HTML', 'CSS'],
     },
     {
         name: 'BusinessName.com.au',
         photos: [
             bnm_1,
         ],
+        stack: ['Zend Express', 'JSX', 'CSS'],
     },
 ]
