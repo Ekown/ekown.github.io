@@ -3,6 +3,7 @@ import { useInView } from 'react-intersection-observer';
 import style from './Projects.module.scss';
 import Title from '../../common/atoms/Title/Title';
 import { PROJECTS } from '../../../core/constants/projects';
+import ProjectCard from '../../common/molecules/ProjectCard/ProjectCard';
 
 const Projects = () => {
   const [triggerTitle, setTriggerTitle] = useState(false);
@@ -14,18 +15,7 @@ const Projects = () => {
 
   PROJECTS.map((objProjects, intKey) => (
     arProjects.push(
-      <div className="project-card col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4" key={'project-' + intKey} >
-        <div>
-          <div className="project-img" style={{
-            background: `url(${objProjects.photos[0]}) center center/cover`
-          }}></div>
-          <div className="card-text overlay">
-            <div><strong>{objProjects.name}</strong></div>
-            <span>{objProjects.stack.join(' / ')}</span>
-          </div>
-          <div className="card-button overlay">SEE MORE</div>
-        </div>
-      </div>
+      <ProjectCard key={'project-' + intKey} {...objProjects} />
     )
   ));
 
