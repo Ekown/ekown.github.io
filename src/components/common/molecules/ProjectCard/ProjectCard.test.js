@@ -7,17 +7,23 @@ afterEach(cleanup);
 let component;
 
 beforeEach(() => {
-  component = (
+  component = (props) => (
     <React.Suspense fallback="loading">
-      <ProjectCard />
+      <ProjectCard {...props} />
     </React.Suspense>
   );
 });
 
-// test('should render properly', async () => {
-//   const { getByText } = render(component);
+test('should render properly', async () => {
+  const { getByText } = render(component({
+    name: 'The Wastelander',
+    photos: [
+      'sdsd',
+    ],
+    stack: ['C#', 'Unity Engine'],
+  },));
 
-//   const lazyElement = await waitFor(() => getByText(/Hi! My name is Eron and I'm a software engineer with a passion for improving old ideas and creating new exciting stuff./i));
+  const lazyElement = await waitFor(() => getByText(/SEE MORE/i));
 
-//   expect(lazyElement).toBeInTheDocument();
-// });
+  expect(lazyElement).toBeInTheDocument();
+});

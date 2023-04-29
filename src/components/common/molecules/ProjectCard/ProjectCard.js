@@ -1,7 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './ProjectCard.module.scss';
+import CustomModal from '../CustomModal/CustomModal';
 
 const ProjectCard = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openModal = () => {
+    setIsOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsOpen(false);
+  };
+
+  const modalContent = {
+    title: props.name,
+    subtitle: props.type,
+    body: props.description,
+    images: props.photos,
+  };
+
   return (
     <div className={styles.projectcard + " col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4"}>
       <div>
@@ -12,8 +30,9 @@ const ProjectCard = (props) => {
           <div><strong>{props.name}</strong></div>
           <span>{props.stack.join(' / ')}</span>
         </div>
-        <div className="card-button overlay">SEE MORE</div>
+        <div className="card-button overlay" onClick={openModal}>SEE MORE</div>
       </div>
+      <CustomModal isOpen={isOpen} onClose={closeModal} content={modalContent} />
     </div>
   );
 }
