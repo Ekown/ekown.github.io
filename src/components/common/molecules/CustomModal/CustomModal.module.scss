@@ -1,12 +1,15 @@
 .CustomModal {
     color: black;
-
+    max-width: 50vw;
+    
     @include responsive('max-width', '100%', '80%');
 
     :global {
         .modal-header {
             text-align: left;   
-            padding: .5rem 1rem;
+            padding: 1rem;
+            
+            @include responsive('padding', '.5rem 1rem');
 
             .modal-title {
                 font-size: 22pt;
@@ -31,8 +34,10 @@
         .modal-body {
             text-align: left;
             font-size: 11pt;
+            padding: 1rem;
 
             @include responsive('font-size', '9pt');
+            @include responsive('padding', '.5rem 1rem');
         }
     } 
 }
