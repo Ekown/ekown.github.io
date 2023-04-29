@@ -13,28 +13,24 @@ const CustomModal = (props) => {
 
   return (
     <>
-      {
-        isOpen && (
-          <Modal dialogClassName={styles.CustomModal} show={isOpen} onHide={onClose} centered>
-            <CustomCarousel images={content.images}/>
-            <Modal.Header closeButton>
-              <div>
-                <Modal.Title>{content.title}</Modal.Title>
-                <div className="tag">{ content.subtitle }</div>
-              </div>
-            </Modal.Header>
-            <Modal.Body>{content.body}</Modal.Body>
-            <Modal.Footer>
-              <Button variant="secondary" onClick={onClose}>
-                View Site
-              </Button>
-              <Button variant="primary" onClick={onClose}>
-                View Source
-              </Button>
-            </Modal.Footer>
-          </Modal>
-        )
-      }
+      <Modal dialogClassName={styles.CustomModal} show={isOpen} onHide={onClose} centered>
+        <CustomCarousel images={content.images} />
+        <Modal.Header closeButton>
+          <div>
+            <Modal.Title>{content.title}</Modal.Title>
+            <div className="tag">{content.subtitle}</div>
+          </div>
+        </Modal.Header>
+        <Modal.Body>{content.body}</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={onClose}>
+            View Site
+          </Button>
+          <Button variant="primary" onClick={onClose}>
+            View Source
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
