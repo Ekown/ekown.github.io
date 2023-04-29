@@ -1,0 +1,11 @@
+.CustomCarousel {
+    @include responsive('height', '45vh');
+
+    :global {
+        .carousel-inner {
+            .carousel-item {
+                @include responsive('height', '45vh');
+            }
+        }
+    }
+}
