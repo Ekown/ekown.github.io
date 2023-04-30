@@ -26,6 +26,8 @@ import fpc_mobile_3 from '../../assets/img/projects/fpc-mobile-3.png';
 import fpc_mobile_4 from '../../assets/img/projects/fpc-mobile-4.png';
 import fpc_mobile_5 from '../../assets/img/projects/fpc-mobile-5.png';
 
+import portal_1 from '../../assets/img/projects/portal-1.png';
+
 // TODO: Add way so that we can just import all the pictures in a directory without referencing every image
 export const PROJECTS = [
     {
@@ -88,7 +90,16 @@ export const PROJECTS = [
             fpc_mobile_4,
             fpc_mobile_5,
         ],
-        stack: ['Ionic', 'Angular', 'JS'],
+        stack: ['Ionic', 'Angular', 'JS', 'Lumen'],
         description: 'The Family Pet Care mobile app, built using Ionic, Angular, and Capacitor, is designed for drivers in the field. The app enables simple order management, allows drivers to create orders, scan QR tags, and features a driver map to track orders in real-time. It\'s a cross-platform mobile app that is easy to use and helps streamline operations for Family Pet Care.',
+    },
+    {
+        name: 'FPC Vet Portal',
+        type: 'Portal',
+        photos: [
+            portal_1,
+        ],
+        stack: ['React', 'JSX', 'Lumen'],
+        description: 'The Family Pet Care portal site, built with React and Lumen, is designed for vet clients. The site provides a user-friendly interface for pet owners to access their pet\'s medical records, schedule appointments, and communicate with their vet. It\'s a secure and efficient way for clients to manage their pet\'s health with Family Pet Care.',
     },
 ]
