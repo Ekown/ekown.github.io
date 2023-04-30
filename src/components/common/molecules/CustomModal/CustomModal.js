@@ -23,12 +23,20 @@ const CustomModal = (props) => {
         </Modal.Header>
         <Modal.Body>{content.body}</Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={onClose}>
-            View Site
-          </Button>
-          <Button variant="primary" onClick={onClose}>
-            View Source
-          </Button>
+          {
+            content.site ? (
+              <Button variant="primary" href={content.site} target="_blank" data-testid="site-button">
+                View Site
+              </Button>
+            ) : null
+          }
+          {
+            content.source ? (
+              <Button variant="primary" href={content.source} target="_blank" data-testid="source-button">
+                View Source
+              </Button>
+            ) : null
+          }
         </Modal.Footer>
       </Modal>
     </>

@@ -18,6 +18,8 @@ const ProjectCard = (props) => {
     subtitle: props.type,
     body: props.description,
     images: props.photos,
+    site: props.site !== '' ? props.site : false,
+    source: props.source !== '' ? props.source : false,
   };
 
   return (
