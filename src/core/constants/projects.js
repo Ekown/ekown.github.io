@@ -20,6 +20,12 @@ import sugar_3 from '../../assets/img/projects/sugar-3.png';
 import sugar_4 from '../../assets/img/projects/sugar-4.png';
 import sugar_5 from '../../assets/img/projects/sugar-5.png';
 
+import fpc_mobile_1 from '../../assets/img/projects/fpc-mobile-1.png';
+import fpc_mobile_2 from '../../assets/img/projects/fpc-mobile-2.png';
+import fpc_mobile_3 from '../../assets/img/projects/fpc-mobile-3.png';
+import fpc_mobile_4 from '../../assets/img/projects/fpc-mobile-4.png';
+import fpc_mobile_5 from '../../assets/img/projects/fpc-mobile-5.png';
+
 // TODO: Add way so that we can just import all the pictures in a directory without referencing every image
 export const PROJECTS = [
     {
@@ -71,5 +77,18 @@ export const PROJECTS = [
         ],
         stack: ['SugarCRM', 'PHP', 'JS', 'Handlebars'],
         description: 'A SugarCRM instance for Family Pet Care includes standard Sugar functionalities with additional features like an order wizard, pricebook management, products cataloging, and opportunity status tracking. It\'s designed to help the company manage its customer relationships more efficiently and streamline its sales process.',
+    },
+    {
+        name: 'FPC Driver App',
+        type: 'Mobile App',
+        photos: [
+            fpc_mobile_1,
+            fpc_mobile_2,
+            fpc_mobile_3,
+            fpc_mobile_4,
+            fpc_mobile_5,
+        ],
+        stack: ['Ionic', 'Angular', 'JS'],
+        description: 'The Family Pet Care mobile app, built using Ionic, Angular, and Capacitor, is designed for drivers in the field. The app enables simple order management, allows drivers to create orders, scan QR tags, and features a driver map to track orders in real-time. It\'s a cross-platform mobile app that is easy to use and helps streamline operations for Family Pet Care.',
     },
 ]
