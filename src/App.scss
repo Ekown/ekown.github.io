@@ -19,6 +19,6 @@ section {
     }
 
     &:nth-child(odd) {
-        background-color: #F0F0F0;
+        background-color: $quaternary-color;
     }
 }

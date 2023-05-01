@@ -37,3 +37,14 @@ test('should show see more button', async () => {
   expect(lazyElement).toBeInTheDocument();
   expect(lazyElement.getElementsByClassName('fa-arrow-right').length).toBe(1);
 });
+
+test('should change title', async () => {
+  const { getByText } = render(component);
+
+  const lazyElement = await waitFor(() => getByText(/^See More$/i));
+
+  mockAllIsIntersecting(true);
+
+  expect(lazyElement).toBeInTheDocument();
+  expect(document.title).toBe('Eron Tancioco | Welcome');
+});

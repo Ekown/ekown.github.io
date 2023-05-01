@@ -1,7 +1,8 @@
-$button-bg-color: #fff;
+$button-bg-color: $quaternary-color;
+$text-color: $quaternary-color;
 
 .resume { 
-    background-color: black;
+    background-color: $secondary-color;
     padding: 5rem 0;
 
     :global {
@@ -18,7 +19,7 @@ $button-bg-color: #fff;
 
             .ghost-button {
                 text-transform: capitalize;
-                color: #fff;
+                color: $quaternary-color;
                 border-color: $button-bg-color;
                 padding: 10px 30px;
                 letter-spacing: 1px;
@@ -28,7 +29,7 @@ $button-bg-color: #fff;
                 @include responsive('width', '75%', '100%', '100%', '100%', '100%');
 
                 &:hover {
-                    color: black;
+                    color: $secondary-color;
                 }
 
                 &:before {
