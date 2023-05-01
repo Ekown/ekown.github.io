@@ -10,5 +10,12 @@
                 @include responsive('height', '45vh', '45vh');
             }
         }
+
+        .carousel-control-prev, .carousel-control-next {
+            background: rgba(0,0,0,0.3);
+            position: absolute;
+            top: auto;
+            height: 25%;
+        }
     }
 }
