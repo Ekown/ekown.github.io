@@ -4,7 +4,12 @@ import Carousel from 'react-bootstrap/Carousel';
 
 const CustomCarousel = (props) => {
   return (
-    <Carousel indicators={false} className={styles.CustomCarousel} fade data-testid="custom-carousel">
+    <Carousel 
+      fade
+      controls={ props.images.length > 1 }
+      indicators={false} 
+      className={styles.CustomCarousel} 
+      data-testid="custom-carousel">
       {
         props.images.map((image, index) => (
           <Carousel.Item key={'carousel-image-' + index} style={{
