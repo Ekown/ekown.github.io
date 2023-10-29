@@ -1,6 +1,6 @@
-@import 'core/theme/theme';
-@import 'core/theme/ghost-button';
-@import 'core/theme/underline';
+@import "core/theme/theme";
+@import "core/theme/ghost-button";
+@import "core/theme/underline";
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -9,8 +9,8 @@
 }
 
 .container {
-    @include responsive('width', null, '95%', '95%', '95%', '95%');
-    @include responsive('--bs-gutter-x', '1.25rem', null, null, null, null);
+    @include responsive("width", null, "95%", "95%", "95%", "95%");
+    @include responsive("--bs-gutter-x", "1.25rem", null, null, null, null);
 }
 
 section {

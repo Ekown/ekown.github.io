@@ -1,11 +1,11 @@
-import React, { lazy, Suspense } from 'react';
+import React, { lazy, Suspense } from "react";
 
-const LazyProjects = lazy(() => import('./Projects'));
+const LazyProjects = lazy(() => import("./Projects"));
 
-const Projects = props => (
-  <Suspense fallback={null}>
-    <LazyProjects {...props} />
-  </Suspense>
+const Projects = (props) => (
+    <Suspense fallback={null}>
+        <LazyProjects {...props} />
+    </Suspense>
 );
 
 export default Projects;

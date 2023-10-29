@@ -1,7 +1,7 @@
 $button-bg-color: $quaternary-color;
 $text-color: $quaternary-color;
 
-.resume { 
+.resume {
     background-color: $secondary-color;
     padding: 5rem 0;
 
@@ -13,8 +13,8 @@ $text-color: $quaternary-color;
                 text-transform: uppercase;
                 margin-bottom: 1.5rem;
 
-                @include responsive('font-size', '22px', '30px', '30px', '30px', '30px');
-                @include responsive('font-weight', '500', '300', '300', '300', '300');
+                @include responsive("font-size", "22px", "30px", "30px", "30px", "30px");
+                @include responsive("font-weight", "500", "300", "300", "300", "300");
             }
 
             .ghost-button {
@@ -25,8 +25,8 @@ $text-color: $quaternary-color;
                 letter-spacing: 1px;
                 max-width: 162px;
                 font-size: 16px;
-                
-                @include responsive('width', '75%', '100%', '100%', '100%', '100%');
+
+                @include responsive("width", "75%", "100%", "100%", "100%", "100%");
 
                 &:hover {
                     color: $secondary-color;

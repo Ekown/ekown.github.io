@@ -1,10 +1,10 @@
-import inRange from 'lodash/inRange';
+import inRange from "lodash/inRange";
 
 /**
  * Generates the progress bar variant based on the skill level value
- * 
- * @param {int} intSkillLevel 
- * @returns {void|string} 
+ *
+ * @param {int} intSkillLevel
+ * @returns {void|string}
  */
 export function generateVariant(intSkillLevel) {
     if (!intSkillLevel || intSkillLevel <= 0) {
@@ -12,10 +12,10 @@ export function generateVariant(intSkillLevel) {
     }
 
     if (inRange(intSkillLevel, 1, 33)) {
-        return 'info';
+        return "info";
     } else if (inRange(intSkillLevel, 34, 66)) {
-        return 'warning';
+        return "warning";
     } else if (inRange(intSkillLevel, 67, 100)) {
-        return 'success';
+        return "success";
     }
-};
+}

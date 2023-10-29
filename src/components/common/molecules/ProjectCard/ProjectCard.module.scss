@@ -32,9 +32,9 @@
             height: 100%;
             width: 100%;
             transition: opacity 0.5s;
-            @include responsive('width', '100vw');
-            @include responsive('max-width', '100%');
-            @include responsive('height', '240px', '300px', '300px', '300px', '300px');
+            @include responsive("width", "100vw");
+            @include responsive("max-width", "100%");
+            @include responsive("height", "240px", "300px", "300px", "300px", "300px");
 
             &:hover {
                 transition: background 0.3s ease-in-out;

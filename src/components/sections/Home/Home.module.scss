@@ -8,7 +8,7 @@
     overflow: hidden;
     filter: drop-shadow(0 0 10px white);
 
-    // We need to use the :global selector to preserve the nesting in scss modules 
+    // We need to use the :global selector to preserve the nesting in scss modules
     // (https://stackoverflow.com/a/70389583)
     // (https://github.com/vercel/next.js/discussions/19417#discussioncomment-1443829)
     :global {
@@ -23,10 +23,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-    
+
             .text {
                 text-align: center;
-                margin-bottom: 10px;    
+                margin-bottom: 10px;
             }
 
             .Typewriter {
@@ -36,24 +36,23 @@
             }
 
             .text {
-                @include responsive('font-size', '21px', '42px', '47px', '50px', '54px');
+                @include responsive("font-size", "21px", "42px", "47px", "50px", "54px");
             }
         }
-    
+
         .name {
             color: $complementary-color;
             font-weight: 550;
         }
-    
+
         .typewrite {
             text-decoration: none;
             color: inherit;
-    
+
             .wrap {
-                border-right: 0.08em solid #fff; 
+                border-right: 0.08em solid #fff;
                 animation: blink-caret 1s steps(1) infinite;
             }
         }
     }
-    
 }

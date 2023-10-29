@@ -1,7 +1,7 @@
-@import '~include-media/dist/_include-media';
+@import "~include-media/dist/_include-media";
 
 // Override default breakpoints with app-defined breakpoints
-$breakpoints : (
+$breakpoints: (
     phone: 576px,
     tablet: 768px,
     laptop: 992px,
@@ -10,11 +10,29 @@ $breakpoints : (
 
 // Media query arguments to be passed based on the responsiveness
 $media-queries: (
-    phone: ('screen', '<=phone'),
-    tablet: ('screen', '>phone', '<=tablet'),
-    laptop: ('screen', '>tablet', '<=laptop'),
-    desktop: ('screen', '>laptop', '<=desktop'),
-    wide: ('screen', '>desktop'),
+    phone: (
+        "screen",
+        "<=phone",
+    ),
+    tablet: (
+        "screen",
+        ">phone",
+        "<=tablet",
+    ),
+    laptop: (
+        "screen",
+        ">tablet",
+        "<=laptop",
+    ),
+    desktop: (
+        "screen",
+        ">laptop",
+        "<=desktop",
+    ),
+    wide: (
+        "screen",
+        ">desktop",
+    ),
 );
 
 ///
@@ -31,12 +49,12 @@ $media-queries: (
         // Get the media query arguments using the screen size
         $media-arguments: map-get($media-queries, $screen-size);
 
-        // Pass the media query arguments to the include-media mixin 
+        // Pass the media query arguments to the include-media mixin
         @include media($media-arguments...) {
-            @content
+            @content;
         }
     } @else {
-        $_: im-log('Unknown responsive screen size `#{$screen-size}`.');
+        $_: im-log("Unknown responsive screen size `#{$screen-size}`.");
     }
 }
 
@@ -49,7 +67,7 @@ $media-queries: (
 /// @return {Boolean}
 ///
 @function check-important($style-value) {
-    @return if(str-index($style-value, '!') == str-length($style-value), true, false);
+    @return if(str-index($style-value, "!") == str-length($style-value), true, false);
 }
 
 ///
@@ -61,13 +79,13 @@ $media-queries: (
 /// @return {string}
 ///
 @function parse-string($style-value) {
-    @if (type-of($style-value) == 'string') {
+    @if (type-of($style-value) == "string") {
         @if (check-important($style-value)) {
             // @TODO: Add error checking when the end part of the string is "!important!"
-            @return str-insert($style-value, ' ', str-length($style-value)) + 'important';
+            @return str-insert($style-value, " ", str-length($style-value)) + "important";
         } @else {
             @return $style-value;
-        }        
+        }
     } @else {
         @return $style-value;
     }
@@ -83,7 +101,7 @@ $media-queries: (
 ///
 @mixin responsive($style-name, $screen-size-style...) {
     @if (length($screen-size-style) == 0) {
-        $_: im-log('Must have at least 1 screen size style.');
+        $_: im-log("Must have at least 1 screen size style.");
     } @else {
         $media-query-keys: map-keys($media-queries);
 

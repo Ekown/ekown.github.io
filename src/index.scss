@@ -1,36 +1,37 @@
-@import 'core/theme/font';
+@import "core/theme/font";
 
-a, a:hover {
-  text-decoration: none;
+a,
+a:hover {
+    text-decoration: none;
 }
 
 body {
-  color: #fff;
-  font-family: 'Raleway', sans-serif;
-  text-align: center !important;
-  margin: 0px;
-  font-size: 8pt;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+    color: #fff;
+    font-family: "Raleway", sans-serif;
+    text-align: center !important;
+    margin: 0px;
+    font-size: 8pt;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
 }
 
 section {
-  position: relative;
-  background-color: #fff;
+    position: relative;
+    background-color: #fff;
 }
 
 .dark {
-  background-color: #c3c0c0;
+    background-color: #c3c0c0;
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-  50% {
-      border-color: transparent;
-  }
+    50% {
+        border-color: transparent;
+    }
 }
 
 .txt-a-l {
-  text-align: left;
+    text-align: left;
 }
