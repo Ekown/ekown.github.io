@@ -6,12 +6,12 @@ import ProjectCard from "../../common/molecules/ProjectCard/ProjectCard";
 import projects from "../../../core/constants/projects";
 
 const PROJECT_DATA = projects;
-const FILTER_DATA = ["Angular", "C#", "CRM", "React", "Ionic", "JavaScript", "Unity", "Zend"];
+const FILTER_DATA = ["All", "Angular", "C#", "CRM", "React", "Ionic", "JavaScript", "Unity", "Zend"];
 
 const Projects = () => {
     const [triggerTitle, setTriggerTitle] = useState(false);
     const [shownProjects, setShownProjects] = useState(PROJECT_DATA);
-    const [filters, setFilters] = useState([]);
+    const [filters, setFilters] = useState(["All"]);
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: false,
@@ -31,8 +31,7 @@ const Projects = () => {
     useEffect(() => {
         function applyProjectStackFilters() {
             const newProjectsArray = PROJECT_DATA.filter((project) => {
-                // Show all projects no filter is selected
-                if (filters.length === 0) {
+                if (filters.includes("All")) {
                     return true;
                 }
 
@@ -54,12 +53,11 @@ const Projects = () => {
      * @param {string} selectedFilter - The filter to be selected or deselected.
      */
     const setSelectedFilters = (selectedFilter) => {
-        setFilters((prevFilters) => {
-            if (prevFilters.includes(selectedFilter)) {
-                return prevFilters.filter((prevFilter) => prevFilter !== selectedFilter);
-            }
+        // We need to clear the shown projects so that the animations will reset
+        setShownProjects([]);
 
-            return [...prevFilters, selectedFilter];
+        setFilters(() => {
+            return [selectedFilter];
         });
     };
 

@@ -2,8 +2,6 @@
     display: inline-block;
     position: relative;
 
-    $parent: &;
-
     &:hover {
         :global {
             .overlay {
@@ -35,6 +33,7 @@
             @include responsive("width", "100vw");
             @include responsive("max-width", "100%");
             @include responsive("height", "240px", "300px", "300px", "300px", "300px");
+            animation: fade-in 0.5s linear, 0.6s zoom-in;
 
             &:hover {
                 transition: background 0.3s ease-in-out;

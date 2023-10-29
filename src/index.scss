@@ -32,6 +32,24 @@ section {
     }
 }
 
+@keyframes zoom-in {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: none;
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
 .txt-a-l {
     text-align: left;
 }
