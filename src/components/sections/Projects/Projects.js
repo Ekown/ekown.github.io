@@ -2,21 +2,20 @@ import React, { useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
 import style from "./Projects.module.scss";
 import Title from "../../common/atoms/Title/Title";
-import { PROJECTS } from "../../../core/constants/projects";
 import ProjectCard from "../../common/molecules/ProjectCard/ProjectCard";
+import projects from "../../../core/constants/projects";
+
+const PROJECT_DATA = projects;
+const FILTER_DATA = ["Angular", "C#", "CRM", "React", "Ionic", "JavaScript", "Unity", "Zend"];
 
 const Projects = () => {
     const [triggerTitle, setTriggerTitle] = useState(false);
+    const [shownProjects, setShownProjects] = useState(PROJECT_DATA);
+    const [filters, setFilters] = useState([]);
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: false,
     });
-    const arProjects = [],
-        arStack = ["All", "Angular", "C#", "CRM", "React", "Ionic", "JavaScript", "Unity", "Zend"];
-
-    PROJECTS.map((objProjects, intKey) =>
-        arProjects.push(<ProjectCard key={"project-" + intKey} {...objProjects} />)
-    );
 
     useEffect(() => {
         if (inView) {
@@ -26,28 +25,78 @@ const Projects = () => {
         }
     }, [inView]);
 
-    const fetchFruits = async () => {
-        try {
-            const response = await fetch("https://fruityvice.com/api/fruit/all");
+    /**
+     * Apply project stack filters based on the selected filters and update the displayed items.
+     */
+    useEffect(() => {
+        function applyProjectStackFilters() {
+            const newProjectsArray = PROJECT_DATA.filter((project) => {
+                // Show all projects no filter is selected
+                if (filters.length === 0) {
+                    return true;
+                }
 
-            const data = await response.json();
+                // Check if the project stack includes the current filters
+                return filters.every((filter) =>
+                    project.stack.some((projectStack) => projectStack.includes(filter))
+                );
+            });
 
-            console.log(response);
-
-            // setFruits(data);
-        } catch (error) {
-            console.error("Error fetching fruits:", error);
+            setShownProjects(newProjectsArray);
         }
-    };
 
-    fetchFruits();
+        applyProjectStackFilters();
+    }, [filters]);
+
+    /**
+     * Set the selected filters for project stack filtering.
+     *
+     * @param {string} selectedFilter - The filter to be selected or deselected.
+     */
+    const setSelectedFilters = (selectedFilter) => {
+        setFilters((prevFilters) => {
+            if (prevFilters.includes(selectedFilter)) {
+                return prevFilters.filter((prevFilter) => prevFilter !== selectedFilter);
+            }
+
+            return [...prevFilters, selectedFilter];
+        });
+    };
 
     return (
         <section>
             <div className={style.projects + " container"} name="Projects" ref={ref}>
                 <Title content="projects" inView={triggerTitle} />
-                <div className="row">{arStack}</div>
-                <div className="row">{arProjects}</div>
+
+                <div className="row">
+                    <div className="btn-group" role="group" aria-label="Filter Projects by Tech Stack">
+                        {FILTER_DATA.map((stackFilter, intKey) => {
+                            return (
+                                <button
+                                    type="button"
+                                    className={
+                                        "btn btn-outline-primary " +
+                                        (filters.length !== 0 && filters.includes(stackFilter)
+                                            ? "active"
+                                            : "")
+                                    }
+                                    key={"project-filter-" + intKey}
+                                    onClick={() => setSelectedFilters(stackFilter)}
+                                >
+                                    {stackFilter}
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                <div className="row">
+                    {shownProjects.length !== 0
+                        ? shownProjects.map((project, intKey) => {
+                              return <ProjectCard key={"project-" + intKey} {...project} />;
+                          })
+                        : "No project with the selected filter..."}
+                </div>
             </div>
         </section>
     );
