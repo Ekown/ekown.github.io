@@ -6,10 +6,6 @@ import CustomCarousel from "../../atoms/CustomCarousel/CustomCarousel";
 
 const CustomModal = (props) => {
     const { isOpen, onClose, content } = props;
-    // const [show, setShow] = useState(isOpen);
-
-    // const handleClose = () => setShow(false);
-    // const handleShow = () => setShow(true);
 
     return (
         <>
