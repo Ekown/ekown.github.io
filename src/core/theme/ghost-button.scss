@@ -2,22 +2,24 @@ $button-color: #4589ed;
 
 a.ghost-button {
     color: $button-color;
-	text-decoration: none;
-	transition: 0.3s ease all;
-	display: inline-block;
-	text-align: center;
-	font-weight: 400;
-	border: 3px solid $button-color;
-	border-radius: 2px;
-	position: relative;
-	box-shadow: 0 2px 10px rgba(0, 0, 0, .16), 0 3px 6px rgba(0, 0, 0, .1);
-	z-index: 2;
+    text-decoration: none;
+    transition: 0.3s ease all;
+    display: inline-block;
+    text-align: center;
+    font-weight: 400;
+    border: 3px solid $button-color;
+    border-radius: 2px;
+    position: relative;
+    box-shadow:
+        0 2px 10px rgba(0, 0, 0, 0.16),
+        0 3px 6px rgba(0, 0, 0, 0.1);
+    z-index: 2;
 
-    @include responsive('width', '100px', '150px', '200px', '250px', '260px');
-    @include responsive('font-size', '12px', '16px', '20px', '24px', '26px');
-    @include responsive('letter-spacing', '0', '1.5px', '2px', '2.5px', '2.75px');
-    @include responsive('padding-top', '5px', '8px', '10px', '12px', '12px');
-    @include responsive('padding-bottom', '5px','8px', '10px', '12px', '12px');
+    @include responsive("width", "100px", "150px", "200px", "250px", "260px");
+    @include responsive("font-size", "12px", "16px", "20px", "24px", "26px");
+    @include responsive("letter-spacing", "0", "1.5px", "2px", "2.5px", "2.75px");
+    @include responsive("padding-top", "5px", "8px", "10px", "12px", "12px");
+    @include responsive("padding-bottom", "5px", "8px", "10px", "12px", "12px");
 
     &:before {
         transition: 0.5s all ease;
@@ -27,7 +29,7 @@ a.ghost-button {
         right: 50%;
         bottom: 0;
         opacity: 0;
-        content: '';
+        content: "";
         background-color: $button-color;
         z-index: -1;
     }
@@ -44,12 +46,12 @@ a.ghost-button {
         margin-left: 10px;
         vertical-align: middle;
         margin-top: -4px;
-        transition: transform .3s;
+        transition: transform 0.3s;
         font-weight: 400;
     }
 
     &:hover {
-        color: #FFF;
+        color: #fff;
         cursor: pointer;
     }
 

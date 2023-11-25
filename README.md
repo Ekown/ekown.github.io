@@ -79,3 +79,5 @@ Thank you for these wonderful works and design models:
 - https://codepen.io/alphardex/pen/dyPorwJ
 - https://css-tricks.com/approaches-media-queries-sass/
 - https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
+- https://www.freecodecamp.org/news/how-to-make-a-filter-component-in-react/
+- https://www.sitepoint.com/building-a-filtering-component-with-css-animations-jquery/

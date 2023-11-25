@@ -3,8 +3,8 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
 
-    @include responsive('padding-left', '0');
-    @include responsive('padding-right', '0');
+    @include responsive("padding-left", "0");
+    @include responsive("padding-right", "0");
 
     :global {
         .row {
