@@ -45,7 +45,7 @@ const ProjectFilters = ({ handleFilterClick, setShownProjects }) => {
 
     return (
         <div className={style.projectfilters}>
-            <div className="row">
+            <div className="row mx-3">
                 <div className="col-12">
                     {FILTER_DATA.map((stackFilter, intKey) => {
                         return (
