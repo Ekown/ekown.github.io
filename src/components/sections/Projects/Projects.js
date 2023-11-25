@@ -4,14 +4,11 @@ import style from "./Projects.module.scss";
 import Title from "../../common/atoms/Title/Title";
 import ProjectCard from "../../common/molecules/ProjectCard/ProjectCard";
 import projects from "../../../core/constants/projects";
-
-const PROJECT_DATA = projects;
-const FILTER_DATA = ["All", "Angular", "C#", "CRM", "React", "Ionic", "JavaScript", "Unity", "Zend"];
+import ProjectFilters from "./ProjectFilters/ProjectFilters";
 
 const Projects = () => {
     const [triggerTitle, setTriggerTitle] = useState(false);
-    const [shownProjects, setShownProjects] = useState(PROJECT_DATA);
-    const [filters, setFilters] = useState(["All"]);
+    const [shownProjects, setShownProjects] = useState(projects);
     const [ref, inView] = useInView({
         threshold: 0.1,
         triggerOnce: false,
@@ -26,39 +23,11 @@ const Projects = () => {
     }, [inView]);
 
     /**
-     * Apply project stack filters based on the selected filters and update the displayed items.
+     * Handle filter button clicks
      */
-    useEffect(() => {
-        function applyProjectStackFilters() {
-            const newProjectsArray = PROJECT_DATA.filter((project) => {
-                if (filters.includes("All")) {
-                    return true;
-                }
-
-                // Check if the project stack includes the current filters
-                return filters.every((filter) =>
-                    project.stack.some((projectStack) => projectStack.includes(filter))
-                );
-            });
-
-            setShownProjects(newProjectsArray);
-        }
-
-        applyProjectStackFilters();
-    }, [filters]);
-
-    /**
-     * Set the selected filters for project stack filtering.
-     *
-     * @param {string} selectedFilter - The filter to be selected or deselected.
-     */
-    const setSelectedFilters = (selectedFilter) => {
+    const handleFilterClick = () => {
         // We need to clear the shown projects so that the animations will reset
         setShownProjects([]);
-
-        setFilters(() => {
-            return [selectedFilter];
-        });
     };
 
     return (
@@ -66,27 +35,7 @@ const Projects = () => {
             <div className={style.projects + " container"} name="Projects" ref={ref}>
                 <Title content="projects" inView={triggerTitle} />
 
-                <div className="row">
-                    <div className="btn-group" role="group" aria-label="Filter Projects by Tech Stack">
-                        {FILTER_DATA.map((stackFilter, intKey) => {
-                            return (
-                                <button
-                                    type="button"
-                                    className={
-                                        "btn btn-outline-primary " +
-                                        (filters.length !== 0 && filters.includes(stackFilter)
-                                            ? "active"
-                                            : "")
-                                    }
-                                    key={"project-filter-" + intKey}
-                                    onClick={() => setSelectedFilters(stackFilter)}
-                                >
-                                    {stackFilter}
-                                </button>
-                            );
-                        })}
-                    </div>
-                </div>
+                <ProjectFilters handleFilterClick={handleFilterClick} setShownProjects={setShownProjects} />
 
                 <div className="row">
                     {shownProjects.length !== 0
