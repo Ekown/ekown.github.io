@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/static/css/main.8e2c86d3.css",
-    "main.js": "/static/js/main.7beff4f7.js",
+    "main.js": "/static/js/main.c428bf7f.js",
     "static/css/430.d7d3acdd.chunk.css": "/static/css/430.d7d3acdd.chunk.css",
     "static/js/430.d8d511c2.chunk.js": "/static/js/430.d8d511c2.chunk.js",
-    "static/css/522.fea4536a.chunk.css": "/static/css/522.fea4536a.chunk.css",
+    "static/css/522.277f197f.chunk.css": "/static/css/522.277f197f.chunk.css",
     "static/js/522.ee06a84c.chunk.js": "/static/js/522.ee06a84c.chunk.js",
     "static/css/727.894d186b.chunk.css": "/static/css/727.894d186b.chunk.css",
     "static/js/727.a069a83d.chunk.js": "/static/js/727.a069a83d.chunk.js",
@@ -13,7 +13,7 @@
     "static/css/922.b06891d1.chunk.css": "/static/css/922.b06891d1.chunk.css",
     "static/js/922.252199fb.chunk.js": "/static/js/922.252199fb.chunk.js",
     "static/js/787.c053f9d6.chunk.js": "/static/js/787.c053f9d6.chunk.js",
-    "static/css/555.19bdde01.chunk.css": "/static/css/555.19bdde01.chunk.css",
+    "static/css/555.88b2005b.chunk.css": "/static/css/555.88b2005b.chunk.css",
     "static/js/555.7c6c6793.chunk.js": "/static/js/555.7c6c6793.chunk.js",
     "static/js/348.e991bc19.chunk.js": "/static/js/348.e991bc19.chunk.js",
     "static/js/104.191d421e.chunk.js": "/static/js/104.191d421e.chunk.js",
@@ -32,7 +32,6 @@
     "static/media/portfolio-2.png": "/static/media/portfolio-2.386c28784ec1cbabb5c0.png",
     "static/media/sugar-2.png": "/static/media/sugar-2.5ecd614a07116f6eaa2b.png",
     "static/media/plm.png": "/static/media/plm.6db0d11ebebc8e689301.png",
-    "static/media/profile3.png": "/static/media/profile3.4a122f25f84499f5eb6e.png",
     "static/media/sugar-3.png": "/static/media/sugar-3.8016ff76615dbfb9800e.png",
     "static/media/sugar-5.png": "/static/media/sugar-5.ea70263bd16fff85c160.png",
     "static/media/sugar-4.png": "/static/media/sugar-4.172ab06db7badcd26754.png",
@@ -44,6 +43,7 @@
     "static/media/fpc-mobile-4.png": "/static/media/fpc-mobile-4.8c55338d7f80973540be.png",
     "static/media/bnm-4.png": "/static/media/bnm-4.00d782cf657b0061c186.png",
     "static/media/cognito.png": "/static/media/cognito.9b0561700e525d0e0059.png",
+    "static/media/profile4.jpg": "/static/media/profile4.ec5a9ab1c1ed934a8fc4.jpg",
     "static/media/fpc-mobile-2.png": "/static/media/fpc-mobile-2.45395fc370b0a179084a.png",
     "static/media/cloudwatch.png": "/static/media/cloudwatch.39ae1a0777aafa96d40e.png",
     "static/media/mysql.png": "/static/media/mysql.4fe76d0c8c2cd39a2766.png",
@@ -64,10 +64,10 @@
     "static/media/jquery.png": "/static/media/jquery.a08bc4cbf8a57358687f.png",
     "index.html": "/index.html",
     "main.8e2c86d3.css.map": "/static/css/main.8e2c86d3.css.map",
-    "main.7beff4f7.js.map": "/static/js/main.7beff4f7.js.map",
+    "main.c428bf7f.js.map": "/static/js/main.c428bf7f.js.map",
     "430.d7d3acdd.chunk.css.map": "/static/css/430.d7d3acdd.chunk.css.map",
     "430.d8d511c2.chunk.js.map": "/static/js/430.d8d511c2.chunk.js.map",
-    "522.fea4536a.chunk.css.map": "/static/css/522.fea4536a.chunk.css.map",
+    "522.277f197f.chunk.css.map": "/static/css/522.277f197f.chunk.css.map",
     "522.ee06a84c.chunk.js.map": "/static/js/522.ee06a84c.chunk.js.map",
     "727.894d186b.chunk.css.map": "/static/css/727.894d186b.chunk.css.map",
     "727.a069a83d.chunk.js.map": "/static/js/727.a069a83d.chunk.js.map",
@@ -76,7 +76,7 @@
     "922.b06891d1.chunk.css.map": "/static/css/922.b06891d1.chunk.css.map",
     "922.252199fb.chunk.js.map": "/static/js/922.252199fb.chunk.js.map",
     "787.c053f9d6.chunk.js.map": "/static/js/787.c053f9d6.chunk.js.map",
-    "555.19bdde01.chunk.css.map": "/static/css/555.19bdde01.chunk.css.map",
+    "555.88b2005b.chunk.css.map": "/static/css/555.88b2005b.chunk.css.map",
     "555.7c6c6793.chunk.js.map": "/static/js/555.7c6c6793.chunk.js.map",
     "348.e991bc19.chunk.js.map": "/static/js/348.e991bc19.chunk.js.map",
     "104.191d421e.chunk.js.map": "/static/js/104.191d421e.chunk.js.map",
@@ -84,6 +84,6 @@
   },
   "entrypoints": [
     "static/css/main.8e2c86d3.css",
-    "static/js/main.7beff4f7.js"
+    "static/js/main.c428bf7f.js"
   ]
 }
