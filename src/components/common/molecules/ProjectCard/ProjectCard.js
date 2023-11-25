@@ -23,7 +23,10 @@ const ProjectCard = (props) => {
     };
 
     return (
-        <div className={styles.projectcard + " col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4"}>
+        <div
+            className={styles.projectcard + " col-12 col-sm-6 col-md-6 col-lg-6 col-xl-4"}
+            data-testid="project-card"
+        >
             <div>
                 <div
                     className="project-img"
@@ -33,7 +36,7 @@ const ProjectCard = (props) => {
                 ></div>
                 <div className="card-text overlay">
                     <div>
-                        <strong>{props.name}</strong>
+                        <strong data-testid="project-card-name">{props.name}</strong>
                     </div>
                     <span data-testid="project-card-stack">{props.stack.join(" / ")}</span>
                 </div>
