@@ -35,7 +35,7 @@ const ProjectCard = (props) => {
                     <div>
                         <strong>{props.name}</strong>
                     </div>
-                    <span>{props.stack.join(" / ")}</span>
+                    <span data-testid="project-card-stack">{props.stack.join(" / ")}</span>
                 </div>
                 <div className="card-button overlay" onClick={openModal}>
                     SEE MORE

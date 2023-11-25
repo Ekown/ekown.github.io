@@ -37,7 +37,7 @@ const Projects = () => {
 
                 <ProjectFilters handleFilterClick={handleFilterClick} setShownProjects={setShownProjects} />
 
-                <div className="row">
+                <div className="row" data-testid="project-cards">
                     {shownProjects.length !== 0
                         ? shownProjects.map((project, intKey) => {
                               return <ProjectCard key={"project-" + intKey} {...project} />;
