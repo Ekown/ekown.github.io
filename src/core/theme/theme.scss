@@ -13,3 +13,6 @@ $secondary-color: #212a3e;
 $tertiary-color: #9ba4b5;
 $quaternary-color: #f1f6f9;
 $highlight-color: #088395;
+
+// Override Bootstrap's primary color
+$primary: $primary-color;

@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import style from "./ProjectFilters.module.scss";
 import projects from "../../../../core/constants/projects";
 import PropTypes from "prop-types";
 
@@ -43,28 +44,24 @@ const ProjectFilters = ({ handleFilterClick, setShownProjects }) => {
     };
 
     return (
-        <div className="project-filters">
+        <div className={style.projectfilters}>
             <div className="row">
                 <div className="col-12">
-                    <div className="btn-group" role="group" aria-label="Filter Projects by Tech Stack">
-                        {FILTER_DATA.map((stackFilter, intKey) => {
-                            return (
-                                <button
-                                    type="button"
-                                    className={
-                                        "btn btn-outline-primary " +
-                                        (filters.length !== 0 && filters.includes(stackFilter)
-                                            ? "active"
-                                            : "")
-                                    }
-                                    key={"project-filter-" + intKey}
-                                    onClick={() => setSelectedFilters(stackFilter)}
-                                >
-                                    {stackFilter}
-                                </button>
-                            );
-                        })}
-                    </div>
+                    {FILTER_DATA.map((stackFilter, intKey) => {
+                        return (
+                            <button
+                                type="button"
+                                className={
+                                    "btn btn-outline-primary " +
+                                    (filters.length !== 0 && filters.includes(stackFilter) ? "active" : "")
+                                }
+                                key={"project-filter-" + intKey}
+                                onClick={() => setSelectedFilters(stackFilter)}
+                            >
+                                {stackFilter}
+                            </button>
+                        );
+                    })}
                 </div>
             </div>
         </div>

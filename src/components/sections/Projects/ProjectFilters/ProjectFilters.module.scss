@@ -1,3 +1,11 @@
-.project-filters {
-    
+.projectfilters {
+    padding-bottom: 1rem;
+
+    :global {
+        button {
+            margin-right: .5rem;
+            margin-bottom: .5rem;
+            border-radius: .75rem;
+        }
+    }
 }
