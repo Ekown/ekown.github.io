@@ -1,6 +1,9 @@
 {
   "name": "ekown.github.io",
-  "version": "0.2.0",
+  "version": "1.0.0",
+  "engines": {
+    "node": "18.19.1"
+  },
   "homepage": "https://ekown.github.io",
   "private": true,
   "dependencies": {
