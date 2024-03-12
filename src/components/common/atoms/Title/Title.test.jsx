@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "./Title";
 import { render, cleanup, waitFor } from "@testing-library/react";
+import { afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 

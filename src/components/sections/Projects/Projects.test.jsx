@@ -1,7 +1,8 @@
 import React from "react";
 import Projects from "./Projects";
-import { render, cleanup, waitFor, fireEvent, getByRole } from "@testing-library/react";
+import { render, cleanup, waitFor, fireEvent } from "@testing-library/react";
 import { mockAllIsIntersecting } from "react-intersection-observer/test-utils";
+import { afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 

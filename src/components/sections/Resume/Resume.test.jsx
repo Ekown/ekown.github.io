@@ -2,6 +2,7 @@ import React from "react";
 import Resume from "./Resume";
 import { render, cleanup, waitFor } from "@testing-library/react";
 import { mockAllIsIntersecting } from "react-intersection-observer/test-utils";
+import { vitest, afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 

@@ -1,7 +1,7 @@
 import React from "react";
 import Skills from "./Skills";
 import { render, cleanup, waitFor, getAllByText } from "@testing-library/react";
-import { mockAllIsIntersecting } from "react-intersection-observer/test-utils";
+import { afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 

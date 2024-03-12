@@ -7,11 +7,16 @@ export default defineConfig(() => {
             outDir: "build",
         },
         plugins: [react()],
+        test: {
+            globals: true,
+            environment: "jsdom",
+            setupFiles: "./src/setUpTests.js",
+        },
         server: {
             // this ensures that the browser opens upon server start
             open: true,
             // this sets a default port to 3000
-            port: 3000,
+            port: 3100,
         },
         css: {
             preprocessorOptions: {

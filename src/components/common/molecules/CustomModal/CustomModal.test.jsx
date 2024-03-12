@@ -1,6 +1,7 @@
 import React from "react";
 import CustomModal from "./CustomModal";
 import { render, cleanup, waitFor } from "@testing-library/react";
+import { vitest, afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 
@@ -18,7 +19,7 @@ test("should render properly", async () => {
     const { getByText } = render(
         component({
             isOpen: true,
-            onClose: jest.fn(),
+            onClose: vitest.fn(),
             content: {
                 title: "My test modal title",
                 images: [],
@@ -35,7 +36,7 @@ test("should render site button if the project has a site", async () => {
     const { queryByTestId } = render(
         component({
             isOpen: true,
-            onClose: jest.fn(),
+            onClose: vitest.fn(),
             content: {
                 title: "My test modal title",
                 images: [],
@@ -53,7 +54,7 @@ test("should not render site button if the project has no site", async () => {
     const { queryByTestId } = render(
         component({
             isOpen: true,
-            onClose: jest.fn(),
+            onClose: vitest.fn(),
             content: {
                 title: "My test modal title",
                 images: [],
@@ -71,7 +72,7 @@ test("should render source button if the project has a source", async () => {
     const { queryByTestId } = render(
         component({
             isOpen: true,
-            onClose: jest.fn(),
+            onClose: vitest.fn(),
             content: {
                 title: "My test modal title",
                 images: [],
@@ -89,7 +90,7 @@ test("should not render source button if the project has no source", async () =>
     const { queryByTestId } = render(
         component({
             isOpen: true,
-            onClose: jest.fn(),
+            onClose: vitest.fn(),
             content: {
                 title: "My test modal title",
                 images: [],

@@ -1,12 +1,13 @@
 import React from "react";
 import { render, cleanup, waitFor, fireEvent } from "@testing-library/react";
 import ProjectFilters from "./ProjectFilters";
+import { vitest, afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 
 let component;
-const mockHandleFilterClick = jest.fn();
-const mockSetShownProjects = jest.fn();
+const mockHandleFilterClick = vitest.fn();
+const mockSetShownProjects = vitest.fn();
 
 beforeEach(() => {
     component = (

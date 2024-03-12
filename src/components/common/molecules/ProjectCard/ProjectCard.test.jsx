@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 import { render, cleanup, waitFor } from "@testing-library/react";
+import { afterEach, beforeEach, test } from "vitest";
 
 afterEach(cleanup);
 

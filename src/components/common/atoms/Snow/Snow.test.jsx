@@ -1,7 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Snow from "./Snow";
-import { render, cleanup } from "@testing-library/react";
+import { render, cleanup, waitFor } from "@testing-library/react";
+import { afterEach, test } from "vitest";
 
 afterEach(cleanup);
 
@@ -12,6 +13,9 @@ test("It should mount", () => {
 });
 
 test("it should render multiple snow particles", async () => {
-    const { container } = render(<Snow />);
-    expect(container.getElementsByClassName("snow").length).toBe(200);
+    const { getAllByTestId } = render(<Snow />);
+
+    const snowParticleElement = await waitFor(() => getAllByTestId("snow-particle"));
+    
+    expect(snowParticleElement.length).toBe(200);
 });
