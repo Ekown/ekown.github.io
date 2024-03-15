@@ -1,0 +1,1 @@
+import{j as e}from"./index-CtcKwBdl.js";const i="_title_6osor_1",s={title:i},l=t=>e.jsx("div",{className:s.title+" underline "+(t.inView?" underline-active ":""),children:e.jsx("h2",{className:"pt-3 mb-5",children:t.content})});export{l as T};
