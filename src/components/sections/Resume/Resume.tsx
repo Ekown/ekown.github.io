@@ -23,7 +23,7 @@ const Resume = () => {
                         <div className="button">
                             <a
                                 className="ghost-button"
-                                href="https://drive.google.com/file/d/1xCAwG-dP1UN91C--NvcDqwwsM9IpDLn2/view?usp=share_link"
+                                href="https://drive.google.com/file/d/1hZzv0IOtpmuOUJXJ4RrpDirVVFjXxJt3/view?usp=sharing"
                                 target="_blank"
                                 rel="noreferrer"
                             >
