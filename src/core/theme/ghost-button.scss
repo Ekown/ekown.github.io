@@ -1,6 +1,7 @@
 $button-color: #4589ed;
 
-a.ghost-button {
+a.ghost-button,
+button.ghost-button {
     color: $button-color;
     text-decoration: none;
     transition: 0.3s ease all;
@@ -10,6 +11,9 @@ a.ghost-button {
     border: 3px solid $button-color;
     border-radius: 2px;
     position: relative;
+    background: none;
+    font-family: inherit;
+    font-size: inherit;
     box-shadow:
         0 2px 10px rgba(0, 0, 0, 0.16),
         0 3px 6px rgba(0, 0, 0, 0.1);

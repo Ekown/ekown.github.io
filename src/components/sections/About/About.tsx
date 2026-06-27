@@ -3,7 +3,6 @@ import { useInView } from "react-intersection-observer";
 import Profile from "../../common/molecules/Profile/Profile";
 import styles from "./About.module.scss";
 import Title from "../../common/atoms/Title/Title";
-import { Element } from "react-scroll";
 
 const About = () => {
     const [triggerTitle, setTriggerTitle] = useState(false);
@@ -21,16 +20,14 @@ const About = () => {
     }, [inView]);
 
     return (
-        <Element name="about">
-            <section>
-                <div className={styles.about + " container"} ref={ref}>
-                    <Title content="about" inView={triggerTitle} />
-                    <div className="content">
-                        <Profile />
-                    </div>
+        <section id="about">
+            <div className={styles.about + " container"} ref={ref}>
+                <Title content="about" inView={triggerTitle} />
+                <div className="content">
+                    <Profile />
                 </div>
-            </section>
-        </Element>
+            </div>
+        </section>
     );
 };
 
