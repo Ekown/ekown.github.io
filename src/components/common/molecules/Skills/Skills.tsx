@@ -10,7 +10,7 @@ const Skills = () => {
     SKILLS.map((objValue, intKey) =>
         arSkillRows.push(
             <div
-                className={"col-12 " + (intKey !== 0 ? "col-lg-6" : "") + (intKey === 0 ? "mb-3" : "")}
+                className={"col-12 " + (intKey !== 0 ? "col-lg-6" : "") + (intKey === 0 ? "mb-5 pb-5" : "")}
                 key={intKey}
             >
                 <h3 className="row skill__label">{objValue.id}</h3>
