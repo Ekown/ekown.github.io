@@ -4,6 +4,7 @@ import Typewriter from 'typewriter-effect';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useInView } from 'react-intersection-observer';
 
+/** @ts-ignore-next-line */
 const Snow = lazy(() => import('../../common/atoms/Snow/Snow'));
 
 const Home = () => {
