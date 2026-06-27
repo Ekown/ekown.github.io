@@ -12,6 +12,7 @@ import laravel from "../../assets/logo/skills/laravel.png";
 import nodejs from "../../assets/logo/skills/nodejs.png";
 import angular from "../../assets/logo/skills/angular.png";
 import ionic from "../../assets/logo/skills/ionic.png";
+import nestjs from "../../assets/logo/skills/nestjs.svg";
 
 import git from "../../assets/logo/skills/git.png";
 import heroku from "../../assets/logo/skills/heroku.png";
@@ -20,6 +21,7 @@ import s3 from "../../assets/logo/skills/s3.png";
 import codepipeline from "../../assets/logo/skills/codepipeline.png";
 import cloudwatch from "../../assets/logo/skills/cloudwatch.png";
 import cognito from "../../assets/logo/skills/cognito.png";
+import postgresql from "../../assets/logo/skills/postgresql.png";
 
 export const SKILLS = [
     {
@@ -28,10 +30,10 @@ export const SKILLS = [
     },
     {
         id: "Libraries & Frameworks",
-        subskills: [jquery, sass, react, laravel, nodejs, angular, ionic],
+        subskills: [jquery, sass, react, laravel, nodejs, angular, ionic, nestjs],
     },
     {
         id: "Tools & Platforms",
-        subskills: [git, heroku, docker, s3, codepipeline, cloudwatch, cognito],
+        subskills: [git, heroku, docker, s3, codepipeline, cloudwatch, cognito, postgresql],
     },
 ];

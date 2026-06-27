@@ -2,7 +2,7 @@ import React from "react";
 import CustomModal from "./CustomModal";
 import { render, cleanup, waitFor } from "@testing-library/react";
 import { vitest, afterEach, beforeEach, test } from "vitest";
-import { CustomModalProps } from "../../../../core/interfaces/props";
+import { CustomModalProps } from "../../../../core/interfaces/props.interface";
 
 afterEach(cleanup);
 

@@ -26,9 +26,16 @@ import fpc_mobile_3 from "../../assets/img/projects/fpc-mobile-3.png";
 import fpc_mobile_4 from "../../assets/img/projects/fpc-mobile-4.png";
 import fpc_mobile_5 from "../../assets/img/projects/fpc-mobile-5.png";
 
+import priceme_1 from "../../assets/img/projects/priceme-1.png";
+import priceme_2 from "../../assets/img/projects/priceme-2.png";
+import priceme_3 from "../../assets/img/projects/priceme-3.png";
+import priceme_4 from "../../assets/img/projects/priceme-4.png";
+import priceme_5 from "../../assets/img/projects/priceme-5.png";
+import priceme_6 from "../../assets/img/projects/priceme-6.png";
+
 import portal_1 from "../../assets/img/projects/portal-1.png";
 
-import { Project } from "../interfaces/projects";
+import { Project } from "../interfaces/projects.interface";
 
 // TODO: Add way so that we can just import all the pictures in a directory without referencing every image
 const projects: Project[]  = [
@@ -91,6 +98,16 @@ const projects: Project[]  = [
         stack: ["React", "JSX", "Lumen"],
         description:
             "The Family Pet Care portal site, built with React and Lumen, is designed for vet clients. The site provides a user-friendly interface for pet owners to access their pet's medical records, schedule appointments, and communicate with their vet. It's a secure and efficient way for clients to manage their pet's health with Family Pet Care.",
+    },
+    {
+        name: "PriceMe",
+        type: "Web App Game",
+        photos: [priceme_1, priceme_2, priceme_3, priceme_4, priceme_5, priceme_6],
+        site: "https://priceme.game/",
+        source: "https://github.com/mikmcelroy1/PriceMe",
+        stack: ["React", "NestJS", "TypeScript", "PostgreSQL"],
+        description:
+            "PriceMe is a web-based game that challenges players to guess the prices of various products. Built with React and NestJS, it features a user-friendly interface and a backend that manages game logic and player data. The game is designed to be engaging and educational, helping players learn about product pricing while having fun.",
     },
 ];
 
