@@ -39,7 +39,7 @@ test('it should have a "Grab a Copy" button that will open a link in new tab', a
 
     expect(lazyElement).toHaveAttribute(
         "href",
-        "https://drive.google.com/file/d/1xCAwG-dP1UN91C--NvcDqwwsM9IpDLn2/view?usp=share_link"
+        "https://drive.google.com/file/d/1hZzv0IOtpmuOUJXJ4RrpDirVVFjXxJt3/view?usp=sharing"
     );
     expect(lazyElement).toHaveAttribute("target", "_blank");
 });
