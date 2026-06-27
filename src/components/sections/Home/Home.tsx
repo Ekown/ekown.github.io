@@ -1,23 +1,23 @@
-import { lazy, useCallback, useEffect } from "react";
-import style from "./Home.module.scss";
-import Typewriter from "typewriter-effect";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useInView } from "react-intersection-observer";
+import { lazy, useCallback, useEffect } from 'react';
+import style from './Home.module.scss';
+import Typewriter from 'typewriter-effect';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useInView } from 'react-intersection-observer';
 
-const Snow = lazy(() => import("../../common/atoms/Snow/Snow"));
+const Snow = lazy(() => import('../../common/atoms/Snow/Snow'));
 
 const Home = () => {
     const scrollToAbout = useCallback(() => {
-        const el = document.getElementById("about");
-        if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-        }
+        const el = document.getElementById('about');
+        if (!el) return;
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        el.scrollIntoView({ behavior: prefersReducedMotion ? 'auto' : 'smooth' });
     }, []);
     const objTypewriterConfig = {
-        strings: ["full-stack web developer.", "software engineer.", "forever learner.", "tech enthusiast."],
+        strings: ['full-stack web developer.', 'software engineer.', 'forever learner.', 'tech enthusiast.'],
         autoStart: true,
         loop: true,
-        wrapperClassName: "typewrite", // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
+        wrapperClassName: 'typewrite', // @TODO: We can use the wrapper as the selector when the :has() selector has been fully implemented in most browsers (https://caniuse.com/css-has)
     };
 
     const [ref, inView] = useInView({
@@ -27,7 +27,7 @@ const Home = () => {
 
     useEffect(() => {
         if (inView) {
-            document.title = "Eron Tancioco | Welcome";
+            document.title = 'Eron Tancioco | Welcome';
         }
     }, [inView]);
 
