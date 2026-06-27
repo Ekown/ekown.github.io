@@ -12,6 +12,7 @@ import laravel from "../../assets/logo/skills/laravel.png";
 import nodejs from "../../assets/logo/skills/nodejs.png";
 import angular from "../../assets/logo/skills/angular.png";
 import ionic from "../../assets/logo/skills/ionic.png";
+import nestjs from "../../assets/logo/skills/nestjs.svg";
 
 import git from "../../assets/logo/skills/git.png";
 import heroku from "../../assets/logo/skills/heroku.png";
@@ -28,7 +29,7 @@ export const SKILLS = [
     },
     {
         id: "Libraries & Frameworks",
-        subskills: [jquery, sass, react, laravel, nodejs, angular, ionic],
+        subskills: [jquery, sass, react, laravel, nodejs, angular, ionic, nestjs],
     },
     {
         id: "Tools & Platforms",
