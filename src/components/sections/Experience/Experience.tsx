@@ -27,7 +27,7 @@ const Experience = () => {
                 <div className="content">
                     <div>
                         Here are some of the technologies that I've worked with for the past{" "}
-                        {workingYears} years.
+                        <strong>{workingYears}</strong> years.
                     </div>
                     <Skills />
                 </div>
