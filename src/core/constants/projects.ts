@@ -28,7 +28,7 @@ import fpc_mobile_5 from "../../assets/img/projects/fpc-mobile-5.png";
 
 import portal_1 from "../../assets/img/projects/portal-1.png";
 
-import { Project } from "../interfaces/projects";
+import { Project } from "../interfaces/projects.interface";
 
 // TODO: Add way so that we can just import all the pictures in a directory without referencing every image
 const projects: Project[]  = [

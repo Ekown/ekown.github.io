@@ -2,7 +2,7 @@ import styles from "./CustomModal.module.scss";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
 import CustomCarousel from "../../atoms/CustomCarousel/CustomCarousel";
-import { CustomModalProps } from "../../../../core/interfaces/props";
+import { CustomModalProps } from "../../../../core/interfaces/props.interface";
 
 const CustomModal = (props: CustomModalProps) => {
     const { isOpen, onClose, content } = props;

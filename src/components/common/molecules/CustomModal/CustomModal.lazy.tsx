@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { CustomModalProps } from "../../../../core/interfaces/props";
+import { CustomModalProps } from "../../../../core/interfaces/props.interface";
 
 const LazyCustomModal = lazy(() => import("./CustomModal"));
 

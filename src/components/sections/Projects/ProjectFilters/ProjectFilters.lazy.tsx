@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { ProjectFiltersProps } from "../../../../core/interfaces/props";
+import { ProjectFiltersProps } from "../../../../core/interfaces/props.interface";
 
 const LazyProjectFilters = lazy(() => import("./ProjectFilters"));
 

@@ -3,8 +3,9 @@ import plm from "../../assets/logo/works/plm.png";
 import crmonline from "../../assets/logo/works/crmonline.png";
 import arcanys from "../../assets/logo/works/arcanys.png";
 import priceme from "../../assets/logo/works/priceme.jpeg";
+import { Work } from "../interfaces/works.interface";
 
-export const WORKS = [
+export const WORKS: Work[] = [
     {
         image: plm,
         link: "https://plm.edu.ph/",

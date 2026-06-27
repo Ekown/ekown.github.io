@@ -4,7 +4,7 @@ import style from "./Projects.module.scss";
 import Title from "../../common/atoms/Title/Title";
 import ProjectCard from "../../common/molecules/ProjectCard/ProjectCard";
 import projects from "../../../core/constants/projects";
-import { Project } from "../../../core/interfaces/projects";
+import { Project } from "../../../core/interfaces/projects.interface";
 import ProjectFilters from "./ProjectFilters/ProjectFilters";
 
 const Projects = () => {

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./ProjectCard.module.scss";
 import CustomModal from "../CustomModal/CustomModal";
-import { ModalContent } from "../../../../core/interfaces/modal-content";
-import { ProjectCardProps } from "../../../../core/interfaces/props";
+import { ModalContent } from "../../../../core/interfaces/modal-content.interface";
+import { ProjectCardProps } from "../../../../core/interfaces/props.interface";
 
 const ProjectCard = (props: ProjectCardProps) => {
     const { project } = props;

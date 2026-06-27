@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import style from "./ProjectFilters.module.scss";
 import projects from "../../../../core/constants/projects";
-import { ProjectFiltersProps } from "../../../../core/interfaces/props";
+import { ProjectFiltersProps } from "../../../../core/interfaces/props.interface";
 
 const FILTER_DATA = ["All", "Angular", "C#", "CRM", "React", "Ionic", "PHP"];
 

@@ -1,5 +1,5 @@
-import { ModalContent } from "./modal-content";
-import { Project } from "./projects";
+import { ModalContent } from "./modal-content.interface";
+import { Project } from "./projects.interface";
 
 export interface CustomModalProps {
     isOpen: boolean;

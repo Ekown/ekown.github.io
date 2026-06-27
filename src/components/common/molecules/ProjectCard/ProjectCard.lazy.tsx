@@ -1,5 +1,5 @@
 import { lazy, Suspense } from "react";
-import { ProjectCardProps } from "../../../../core/interfaces/props";
+import { ProjectCardProps } from "../../../../core/interfaces/props.interface";
 
 const LazyProjectCard = lazy(() => import("./ProjectCard"));
 
