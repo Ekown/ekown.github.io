@@ -6,20 +6,28 @@ import priceme from "../../assets/logo/works/priceme.jpeg";
 
 export const WORKS = [
     {
-        id: "Work Experience",
-        employments: [
-            plm, 
-            bsw, 
-            crmonline, 
-            priceme,
-            arcanys
-        ],
-        links: [
-            // "https://plm.edu.ph/",
-            "https://www.business-switch.com.au/",
-            "https://www.crmonline.com.au/",
-            "https://priceme.game/",
-            "https://arcanys.com/",
-        ],
+        image: plm,
+        link: "https://plm.edu.ph/",
+        active: false,
+    },
+    {
+        image: bsw,
+        link: "https://www.business-switch.com.au/",
+        active: true,
+    },
+    {
+        image: crmonline,
+        link: "https://www.crmonline.com.au/",
+        active: true,
+    },
+    {
+        image: priceme,
+        link: "https://priceme.game/",
+        active: true,
+    },
+    {
+        image: arcanys,
+        link: "https://arcanys.com/",
+        active: true,
     },
 ];

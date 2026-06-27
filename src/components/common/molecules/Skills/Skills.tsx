@@ -1,7 +1,7 @@
-import styles from "./Skills.module.scss";
-import { Image } from "react-bootstrap";
-import { SKILLS } from "../../../../core/constants/skills";
-import { WORKS } from "../../../../core/constants/works";
+import styles from './Skills.module.scss';
+import { Image } from 'react-bootstrap';
+import { SKILLS } from '../../../../core/constants/skills';
+import { WORKS } from '../../../../core/constants/works';
 
 const Skills = () => {
     const arSkillRows: JSX.Element[] = [],
@@ -10,7 +10,7 @@ const Skills = () => {
     SKILLS.map((objValue, intKey) =>
         arSkillRows.push(
             <div
-                className={"col-12 " + (intKey !== 0 ? "col-lg-6" : "") + (intKey === 0 ? "mb-5 pb-5" : "")}
+                className={'col-12 ' + (intKey !== 0 ? 'col-lg-6' : '') + (intKey === 0 ? 'mb-5 pb-5' : '')}
                 key={intKey}
             >
                 <h3 className="row skill__label">{objValue.id}</h3>
@@ -18,7 +18,7 @@ const Skills = () => {
                     {objValue.subskills.map((objSkill, intSubskillKey) => (
                         <div
                             className={
-                                "logo-col col-3 col-sm-2 col-md-2 d-flex " + (intKey !== 0 ? "col-lg-4" : "")
+                                'logo-col col-3 col-sm-2 col-md-2 d-flex ' + (intKey !== 0 ? 'col-lg-4' : '')
                             }
                             key={intKey + intSubskillKey}
                         >
@@ -30,30 +30,31 @@ const Skills = () => {
         )
     );
 
-    WORKS.map((objValue, intKey) =>
-        arWorkRows.push(
-            <div className="row work" key={intKey}>
-                <div className="col-12">
-                    <h3 className="row work__label">{objValue.id}</h3>
-                    <div className="row work__logos">
-                        {objValue.employments.map((objSkill, intEmploymentKey) => (
-                            <div
-                                className="logo-col col-12 col-sm-12 col-md-3 col-lg-12 d-flex"
-                                key={intKey + intEmploymentKey}
-                            >
-                                <a href={objValue.links[intEmploymentKey]} target="_new">
-                                    <Image src={objSkill} fluid={true} className="logo" />
-                                </a>
-                            </div>
-                        ))}
-                    </div>
+    arWorkRows.push(
+        <div className="row work" key="work-experience">
+            <div className="col-12">
+                <h3 className="row work__label">Work Experience</h3>
+                <div className="row work__logos">
+                    {WORKS.map(
+                        (objValue, intKey) =>
+                            objValue.active && (
+                                <div
+                                    className="logo-col col-12 col-sm-12 col-md-3 col-lg-12 d-flex"
+                                    key={'work-experience' + intKey}
+                                >
+                                    <a href={objValue.link} target="_new">
+                                        <Image src={objValue.image} fluid={true} className="logo" />
+                                    </a>
+                                </div>
+                            )
+                    )}
                 </div>
             </div>
-        )
+        </div>
     );
 
     return (
-        <div className={styles.skills + " container mt-4"}>
+        <div className={styles.skills + ' container mt-4'}>
             <div className="row">
                 <div className="col-12 col-lg-8 tech-content mt-3">
                     <div className="row skill">{arSkillRows}</div>
