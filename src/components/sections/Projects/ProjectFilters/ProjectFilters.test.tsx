@@ -39,3 +39,15 @@ test("should handle filter click", async () => {
     expect(mockHandleFilterClick).toHaveBeenCalled();
     expect(mockSetShownProjects).toHaveBeenCalled();
 });
+
+test("should handle filter click for All", async () => {
+    const { getByText } = render(component);
+
+    const lazyElement = await waitFor(() => getByText(/^All$/i));
+
+    // Click on the All filter button
+    fireEvent.click(lazyElement);
+
+    expect(mockHandleFilterClick).toHaveBeenCalled();
+    expect(mockSetShownProjects).toHaveBeenCalled();
+});
