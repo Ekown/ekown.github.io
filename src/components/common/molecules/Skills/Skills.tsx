@@ -2,7 +2,6 @@ import styles from "./Skills.module.scss";
 import { Image } from "react-bootstrap";
 import { SKILLS } from "../../../../core/constants/skills";
 import { WORKS } from "../../../../core/constants/works";
-import { JSX } from "react/jsx-runtime";
 
 const Skills = () => {
     const arSkillRows: JSX.Element[] = [],
