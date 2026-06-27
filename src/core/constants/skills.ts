@@ -21,6 +21,7 @@ import s3 from "../../assets/logo/skills/s3.png";
 import codepipeline from "../../assets/logo/skills/codepipeline.png";
 import cloudwatch from "../../assets/logo/skills/cloudwatch.png";
 import cognito from "../../assets/logo/skills/cognito.png";
+import postgresql from "../../assets/logo/skills/postgresql.png";
 
 export const SKILLS = [
     {
@@ -33,6 +34,6 @@ export const SKILLS = [
     },
     {
         id: "Tools & Platforms",
-        subskills: [git, heroku, docker, s3, codepipeline, cloudwatch, cognito],
+        subskills: [git, heroku, docker, s3, codepipeline, cloudwatch, cognito, postgresql],
     },
 ];
