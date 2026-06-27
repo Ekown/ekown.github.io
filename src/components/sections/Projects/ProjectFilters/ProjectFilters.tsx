@@ -1,12 +1,23 @@
-import { useEffect, useState } from "react";
-import style from "./ProjectFilters.module.scss";
-import projects from "../../../../core/constants/projects";
-import { ProjectFiltersProps } from "../../../../core/interfaces/props.interface";
+import { useEffect, useState } from 'react';
+import style from './ProjectFilters.module.scss';
+import projects from '../../../../core/constants/projects';
+import { ProjectFiltersProps } from '../../../../core/interfaces/props.interface';
 
-const FILTER_DATA = ["All", "Angular", "C#", "CRM", "React", "Ionic", "PHP"];
+const FILTER_DATA = [
+    'All',
+    'Angular',
+    'C#',
+    'CRM',
+    'React',
+    'Ionic',
+    'PHP',
+    'NestJS',
+    'TypeScript',
+    'PostgreSQL',
+];
 
 const ProjectFilters = ({ handleFilterClick, setShownProjects }: ProjectFiltersProps) => {
-    const [filters, setFilters] = useState(["All"]);
+    const [filters, setFilters] = useState(['All']);
 
     /**
      * Apply project stack filters based on the selected filters and update the displayed items.
@@ -14,7 +25,7 @@ const ProjectFilters = ({ handleFilterClick, setShownProjects }: ProjectFiltersP
     useEffect(() => {
         function applyProjectStackFilters() {
             const newProjectsArray = projects.filter((project) => {
-                if (filters.includes("All")) {
+                if (filters.includes('All')) {
                     return true;
                 }
 
@@ -52,10 +63,10 @@ const ProjectFilters = ({ handleFilterClick, setShownProjects }: ProjectFiltersP
                             <button
                                 type="button"
                                 className={
-                                    "btn btn-outline-primary " +
-                                    (filters.length !== 0 && filters.includes(stackFilter) ? "active" : "")
+                                    'btn btn-outline-primary ' +
+                                    (filters.length !== 0 && filters.includes(stackFilter) ? 'active' : '')
                                 }
-                                key={"project-filter-" + intKey}
+                                key={'project-filter-' + intKey}
                                 onClick={() => setSelectedFilters(stackFilter)}
                             >
                                 {stackFilter}
